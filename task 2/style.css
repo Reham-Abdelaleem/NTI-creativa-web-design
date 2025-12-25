@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+.text-center{ text-align: center;}
+.inline-block{ display: inline-block;}
+.rel{ position: relative;}
+.abs{ position: absolute;}
+.d-flex{ 
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-15{ margin: 15px 0;}
+.w-30{ width: 25px;}
+/* .h-60{ height: 100%};   */
+nav{
+    background-color: #FFC297;
+    height: 100vh;
+    width: 60px;
+}
+nav .logo{
+    width: 65%;
+}
+nav ul li{   
+    margin: 12px;
+    font-size: 20px;
+    padding: 10px 0;
+}
+ul li{ list-style-type: none;}
+nav ul a{ color: #FF7008;}
+nav ul .icons{ width: 75%;}
+nav div a{ color: #FFFFFF;}
+nav div{
+    background-color: #FF7008;
+    color: #FFFFFF;
+    width: 75%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 170px auto 5px auto;
+    /* margin: 0 auto; */
+    /* margin-top: 100px; */
+    padding: 11px;
+    font-size: 20px;
+}
+.dashboard{
+    width: 200px;
+    margin-left: 15px;
+    height: 100vh;
+    border-right: 1px solid #858585;
+}
+.dashboard div{ margin: 5px 0 29px 0;}
+.dashboard ul .icons{ 
+    width: 27px;
+    padding-top: 2px;
+    margin-right: 14px;
+}
+.dashboard ul li{   
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+    padding: 13px 0;
+    color: #858585;   
+}
+.dashboard .active{
+    color: #1C1C1C;
+    font-weight: 700;
+}
+.dashboard ul { padding-left: 25px;}
+.dashboard p, .dashboard h3{ padding: 8px 0 10px 10px;}
+/* .dashboard h3{ 
+    font-weight: 700;
+} */
+.main{
+    margin-left: 15px;
+    width: calc(100% - 290px);
+}
+.main .profile { 
+    
+    justify-content: flex-end;
+    /* gap: 15px; */
+    align-items: center;
+    margin: 15px 20px 0px 5px;
+}
+.main .profile img{ 
+    /* aspect-ratio: 1/1; */
+    border-radius: 50%;
+    margin-left: 20px; 
+}
+/* if we have icons in div profile */
+/* .main .profile .notifications{ 
+    background-color: #D9D9D9;
+    color: #1C1C1C;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    text-align: center;
+    padding: 7px 5px 4px 4px;
+} */
+.main .content{
+    margin-left: 60px;
+    margin-right: 150px;
+}
+.main .content .header{
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px ;  
+}
+.main .content .header img{ 
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;    
+}
+.main .content form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .content form .two-inputs{
+    width: 100%;
+}
+.main .content form .half-width{
+    width: 47%;   
+}
+.main .content form .two-inputs .half-width:first-child{
+    margin-right: 5%;
+}
+.main .content form .full-width{
+    width:100%;
+}
+.main .content form label{
+    color: #1C1C1C;
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    width: 100%;
+    margin: 5px auto;  
+}
+.main .content form input, .main .content form select{
+    color: #858585;
+    padding: 12px 15px;
+    border: 1px solid #858585;
+    border-radius: 5px;
+    font-weight: 500;
+    width: 100%;
+}
+/* Select dropdowm arrow  */
+.main .content form select{
+    /* Hide the dropdowm=n arrow */
+    appearance: none;  
+}
+.main .content form .icon-check{
+    top: 30%;
+    right: 3%;
+    color: #23b000;
+}
+.main .content form .icon-dropdown{
+    color: #1C1C1C;
+    top: 25%;
+    right: 4%;
+}
+.main .content form .form-buttons button{
+    border: 1px solid #FF7008;
+    border-radius: 4px;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 20px 20px 15px 0;
+    cursor: pointer;
+}
+.main .content form .btn-cancel{
+    background-color: #FFFFFF;    
+    color: #FF7008;
+    padding: 5px 30px;
+    font-weight: 400;
+}
+.main .content form .btn-save{
+    background-color: #FF7008;
+    color: #FFFFFF;
+    padding: 5px 32px;  
+    font-weight: 600;
+}

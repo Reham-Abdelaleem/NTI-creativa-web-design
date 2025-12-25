@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Setting</title>
+</head>
+<body class="d-flex">
+    <!-- Sidebar Header -->
+    <nav class="text-center">
+        <img class="logo my-15" src="images/logo.png" alt="">
+        <ul class="h-60">
+            <!-- <li><a href="#" target="_blank"><i class="fa-regular fa-house"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-regular fa-bell"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-regular fa-calendar"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-solid fa-gear"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa-regular fa-user"></i></a></li> -->
+            <li><a href="#" target="_blank"><img class="icons" src="images/Home icon.png" alt=""></a></li>
+            <li><a href="#" target="_blank"><img class="icons" src="images/Alarm Icon.png" alt=""></a></li>
+            <li><a href="#" target="_blank"><img class="icons" src="images/Calendar icon.png" alt=""></a></li>
+            <li><a href="#" target="_blank"><img class="icons" src="images/Line Chart Icon.png" alt=""></a></li>
+            <li><a href="#" target="_blank"><img class="icons" src="images/User icon.png" alt=""></a></li>
+        </ul>
+        <div class="text-center">
+            <a href="#" target="_blank"><i class="fa-solid fa-gear"></i></a>
+        </div>
+    </nav>
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div>
+            <i class="fa-solid fa-angle-left"></i>
+            <h3 class="inline-block">settings</h3>            
+        </div>
+        <ul>
+            <li>
+                <a href="#"><img class="icons" src="images/edit icon.png" alt=""></a>
+                <p class="inline-block active">Edit profile</p>
+            </li>
+            <li>
+                <a href="#"><img class="icons" src="images/notifications icon.png" alt=""></a>
+                <p>Notification</p>
+            </li>
+            <li>
+                <a href="#"><img class="icons" src="images/security icon.png" alt=""></a>
+                <p class="inline-block">Security</p>
+            </li>
+            <li>
+                <a href="#"><img class="icons" src="images/setting icon.png" alt=""></a>
+                <p class="inline-block">Appearance</p>
+            </li>
+            <li>
+                <a href="#"><img class="icons" src="images/help icon.png" alt=""></a>
+                <p class="inline-block">Help</p>
+            </li>
+        </ul>
+    </section> 
+    <section class="main">
+        <div class="profile d-flex">
+            <!-- <div class="notifications">
+                <i class="fa-regular fa-bell"></i>
+            </div> -->
+            <img class="w-30" src="images/Notifications.png" alt="">
+            <img class="w-30" src="images/unsplash_C8Ta0gwPbQg.png" alt="">
+        </div>
+        <div class="content">
+            <div class="header d-flex">
+                <h2>Edit profile</h2>
+                <img src="images/unsplash_C8Ta0gwPbQg.png" alt="">
+            </div> 
+            <form action="#" method="post">
+                <!-- First Name and Last Name Row -->
+                <div class="two-inputs">
+                    <div class="half-width inline-block">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" required placeholder="Mehrab">                    
+                    </div>
+                    <div class="half-width inline-block">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" name="last-name" required placeholder="Bozorgi">                    
+                    </div>                    
+                </div>
+                <!-- Email Row -->
+                <div class="full-width">
+                    <label for="email">Email</label>
+                    <div class="rel">
+                        <input type="email" id="email" name="email" required placeholder="Mehrabbozorgi.business@gmail.com">
+                        <span class="abs icon-check"><i class="fa-solid fa-square-check"></i></span>
+                    </div>                    
+                </div>
+                <!-- Address Row -->
+                <div class="full-width">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="33062 Zboncak isle">
+                </div>
+                <!-- Contact Number Row -->
+                <div class="full-width">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="58077.79">
+                </div>
+                <!-- City and State Row -->
+                <div class="two-inputs">
+                    <div class="half-width inline-block">
+                        <!-- Select box for cities -->
+                        <label for="cities">City</label>                        
+                        <div class="rel">
+                            <select name="city" id="cities" required>
+                                <option value="mehrab" selected hidden disabled>Mehrab</option>
+                                <option value="" disabled>Select your city</option>
+                                <option value="new_york">New York</option>
+                                <option value="los_angeles">Los Angeles</option>
+                                <option value="london">London</option>
+                                <option value="paris">Paris</option>
+                                <option value="tokyo">Tokyo</option>
+                            </select>   
+                            <span class="icon-dropdown abs"><i class="fa-solid fa-angle-down"></i></span>  
+                        </div>
+                    </div>
+                    <div class="half-width inline-block">
+                        <!-- Select box for states -->
+                        <label for="states">State</label>
+                        <div class="rel">
+                            <select name="state" id="states"required>
+                                <option value="bozorgi" selected hidden disabled>Bozorgi</option>
+                                <option value="" disabled>Select your State</option>
+                                <option value="california">California</option>
+                                <option value="texas">Texas</option>
+                                <option value="new_york">New York</option>
+                                <option value="dubai">Dubai</option>
+                                <option value="berlin">Berlin</option>
+                            </select>  
+                            <span class="icon-dropdown abs"><i class="fa-solid fa-angle-down"></i></span>                          
+                        </div>
+                    
+                    </div>
+                </div>
+                <!-- Password Row -->
+                <div class="full-width">
+                    <label for="password">Password</label>
+                    <div class="rel">
+                        <input type="password" id="password" name="pass" required placeholder="sbdfbnd65sfdvb s" minlength="8" maxlength="20">
+                        <span class="abs icon-check"><i class="fa-solid fa-square-check"></i></span>
+                    </div>                    
+                </div>
+                <!-- Buttons -->
+                <div class="form-buttons">
+                    <button class="btn-cancel" type="reset" value="reset">Cancel</button>
+                    <button class="btn-save" type="submit" value="save">Save</button>                    
+                </div>
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
