@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+.d-flex{ display: flex;}
+.rel{ position: relative;}
+.abs{ position: absolute;}
+.container{
+    width: 100%;
+    height: 50vh;
+    margin: 15% auto;
+}
+.cards{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.card{
+    width: 21%;
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.front , .back{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+.front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: all 0.5s;
+}
+.card:hover .front{
+    transform: scale(0.5);
+    bottom: 18%;
+}
+.back {
+    background-color: #FFFCDE;
+    color: #000000;
+    text-align: center;
+    transition: all 0.5s;
+}
+.back .info{
+    margin-top: 145%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    transition: all 0.5s;
+}
+.back h2{
+    font-size: 13px;
+    font-weight: 600;
+}
+.back p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.back ul{ 
+    list-style-type: none;
+    text-align: center;    
+    /* justify-content: space-around; */
+    gap: 7px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+.card:hover .back .info{
+    margin-top: 85%;
+    opacity: 1;
+}
