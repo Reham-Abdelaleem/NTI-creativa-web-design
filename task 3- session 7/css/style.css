@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+.d-flex{ display: flex;}
+.rel{ position: relative;}
+.abs{ position: absolute;}
+.sec{
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    background: url("../images/background.jpg") center / cover no-repeat;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.card{
+    width: 70%;
+    height: 85%;
+    border-radius: 25px;
+    margin: auto;
+    overflow: hidden;
+}
+.front,.back{ 
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+.front{
+    background: url("../images/card1-front.jpg") center / cover no-repeat;   
+}
+.button a{ 
+    color: #19ABFE;
+    text-decoration: none;
+}
+.button{
+    border: 2px solid #19ABFE;
+    font-size: 15px;
+    padding: 13px 9px 13px 8px;    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 10%;
+    bottom: 10%;
+    cursor: pointer;
+    transition: all 0.4s;
+    align-items: center;
+    justify-content: center;
+}
+.text{
+    width: 49%;
+    text-align: justify;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    left: 11%;
+    bottom: 7%;
+    transition: all 0.4s;
+}
+.card:hover .front{ 
+    transform: rotateY(180deg);
+}
+.card:hover .text{
+    bottom: 50%;
+    color: #1E335C;
+} 
+.card:hover .back{
+    transform: rotateY(0deg);
+}
+.card .back{
+    background-color: #FFFFFF;
+    text-align: justify;
+    padding: 11%;
+    transform: rotateY(180deg);
+}
+.back img{
+    width: 25%;
+    margin-top: 23%;
+    margin-bottom: 36%;
+}
+.back .info p{
+    color: #6C7994;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: left;
+}
+/* Read more section */
+.back .read-more{
+    color: #19ABFE;
+    right: 10%;
+    bottom: 10%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    cursor: pointer; 
+}
+.back .read-more span{
+    font-weight: 400;
+    font-size: 16px;
+}
+.back .read-more:hover span{
+    opacity: 0;
+}
+.back .read-more .button{
+    color: #19ABFE;
+    padding: 14px 18px 14px 11px ;
+    width: 50px;
+    height: 50px;
+    transition: all 0.2s;
+}
+.back .read-more .button a{
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    height: 100%;
+}
+.back .read-more .button .hidden-text{
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 0;
+    width: 0;
+    line-height: 1;
+}
+.back .read-more:hover .button a,
+.back .read-more:hover .hidden-text{
+    color: #FFFFFF;
+}
+ .back .read-more:hover .button{
+    background-color: #19ABFE;
+    color: #FFFFFF;
+    width: 180px;
+    border-radius: 30px;
+    padding: 14px 25px;    
+}
+.back .read-more:hover .button .hidden-text{
+    opacity: 1;
+    width: fit-content;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Card Flip Animation</title>
+</head>
+<body>
+    <section class="sec">
+        <div class="content d-flex">
+            <div class="card rel">
+                <!-- Card back -->
+                <div class="back abs">
+                    <img src="images/icon.png" alt="">
+                    <div class="info">
+                        <p>The Program aims to develop a diversified and effective financial sector to support the development of the Saudi Arabia's economy.</p>
+                    </div>
+                    <div class="d-flex read-more abs">
+                        <span>Read More</span> 
+                        <div class="button d-flex">
+                            <a href="#" class="d-flex">
+                                <span class="hidden-text">Read More</span>
+                                <i class="fa-solid fa-arrow-right"></i> 
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <!-- Card front -->
+                <div class="front abs">
+                     <!-- <img src="images/card1-front.jpg" alt=""> -->
+                    <div class="button abs d-flex">
+                        <a href="#"><i class="fa-solid fa-arrow-up fa-rotate-by" style="--fa-rotate-angle: 45deg;"></i></a>
+                    </div> 
+                </div>  
+                <!-- Text animation -->
+                <div class="text abs">
+                    <h2>Financial Sector Development Program</h2>
+                </div> 
+            </div> 
+        </div>
+    </section>
+</body>
+</html>
