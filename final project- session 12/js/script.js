@@ -24,13 +24,19 @@ $(document).ready(function () {
     autoplay: true,
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3
         }
       },
       {
-        breakpoint: 767,
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 576,
         settings: {
           slidesToShow: 1
         }
@@ -38,3 +44,4 @@ $(document).ready(function () {
     ]
   });
 });
+
