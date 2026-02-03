@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Docure, healthcare, medical -->
+    <meta name="keywords" content="#">
+    <!-- Docure is a healthcare platform providing medical services and support. -->
+    <meta name="description" content="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Docure</title>
+</head>
+
+<body>
+    <!-- Main header --> 
+    <nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+        <div class="container ">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.svg" alt="Docure Logo" type="image/svg">
+            </a>
+            <!-- Navbar Toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
+                <!-- Navbar links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Doctors
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Patients
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Pharmacy
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <!-- <ul class=" p-0 m-0">
+                            <li><a href="#" target="_blank">Pharmacy</a></li>
+                            <li><a href="pharmacy-details.html" target="_blank">Pharmacy Details</a></li>
+                            <li><a href="#" target="_blank">Pharmacy Search</a></li>
+                            <li><a href="#" target="_blank">Product</a></li>
+                            <li><a href="#" target="_blank">Product Description</a></li>
+                            <li><a href="#" target="_blank">Cart</a></li>
+                            <li><a href="#" target="_blank">Product Checkout</a></li>
+                            <li><a href="#" target="_blank">Payment Success</a></li>
+                            <li><a href="#" target="_blank">Pharmacy Register</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Pages
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <!-- <ul class="dropdown-content p-0 m-0 d-flex flex-wrap">
+                            <li>
+                                <ul class="menu-list  p-0 m-0">
+                                    <li><a href="#" target="_blank">About Us</a></li>
+                                    <li><a href="contact-us.html" target="_blank">Contact Us</a></li>
+                                    <li><a href="#" target="_blank">Hospitals</a></li>
+                                    <li><a href="#" target="_blank">Speciality</a></li>
+                                    <li><a href="#" target="_blank">Clinic</a></li>
+                                    <li><a href="#" target="_blank">Starter Page</a></li>
+                                    <li><a href="#" target="_blank">Pricing Plan</a></li>
+                                    <li><a href="#" target="_blank">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="menu-list p-0 m-0">
+                                    <li><a href="#" target="_blank">Login Email</a></li>
+                                    <li><a href="#" target="_blank">Login Phone</a></li>
+                                    <li><a href="#" target="_blank">Doctor Signup</a></li>
+                                    <li><a href="#" target="_blank">Patient Signup</a></li>
+                                    <li><a href="#" target="_blank">Forgot Password 1</a></li>
+                                    <li><a href="#" target="_blank">Forgot Password 2</a></li>
+                                    <li><a href="#" target="_blank">Email OTP</a></li>
+                                    <li><a href="#" target="_blank">Phone OTP</a></li>
+                                </ul>                                
+                            </li>
+                            <li>
+                                <ul class="menu-list p-0 m-0">
+                                    <li><a href="#" target="_blank">Maintenance</a></li>
+                                    <li><a href="#" target="_blank">Coming Soon</a></li>
+                                    <li><a href="#" target="_blank">Terms & Condition</a></li>
+                                    <li><a href="#" target="_blank">Privacy Policy</a></li>
+                                    <li><a href="#" target="_blank">Components</a></li>
+                                    <li><a href="#" target="_blank">Invoices</a></li>
+                                    <li><a href="#" target="_blank">Invoice View</a></li>
+                                </ul>                                
+                            </li>
+                            <li>
+                                <ul class="menu-list p-0 m-0">
+                                    <li><a href="#">Voice Call</a></li>
+                                    <li><a href="#" target="_blank">Video Call</a></li>
+                                    <li><a href="#" target="_blank">404 Error</a></li>
+                                    <li><a href="#" target="_blank">500 Error</a></li>
+                                </ul>
+                            </li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Blog
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="dropdown-content p-0 m-0">
+                            <li><a href="#" target="_blank">Blog List</a></li>
+                            <li><a href="#" target="_blank">Blog Grid</a></li>
+                            <li><a href="blog-details.html" target="_blank">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Admin
+                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="#" target="_blank">Admin</a>
+                            <a href="#" target="_blank">Pharmacy Admin</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="d-flex mb-0">
+                    <!-- Sign up button -->
+                    <li class="d-flex me-3 d-xl-block d-none border-0">
+                        <a href="#" class="btn btn-md btn-primary-gradient">
+                            <i class="fa-solid fa-lock me-2"></i><span>Sign Up</span>
+                        </a>
+                    </li>
+                    <!-- Register button -->
+                    <li class="d-flex me-3 d-xl-block d-none border-0">
+                        <a href="#" class="btn btn-md btn-dark">
+                            <i class="fa-solid fa-user-clock me-2"></i><span>Register</span>
+                        </a>
+                    </li>
+                    <!-- Off-canvas button -->
+                    <li class="details">
+                        <a class="btn details-btn d-flex align-items-center justify-content-center"
+                            data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample">
+                            <i class="fa-solid fa-list-ul"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Off-canvas -->
+    <div class="offcanvas offcanvas-end rounded m-3 pt-4 px-4 pb-5" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <!-- Off-canvas header -->
+        <div class="offcanvas-header mb-3 d-flex align-items-center justify-content-between ">
+            <a href="index.html"><img src="images/logo.svg" alt="" type="image/svg"></a>
+            <button type="button" class="btn-close d-flex align-items-center justify-content-between" data-bs-dismiss="offcanvas" aria-label="Close">
+            <i class="fa-regular fa-circle-xmark fs-3"></i>
+            </button>
+        </div>
+        <!-- Off-canvas body -->
+        <div class="offcanvas-body position-relative">
+            <!-- Item 1 -->
+            <div class="about-item pb-4 mb-4">
+                <h3 class="title mb-3 fs-5 fw-semibold gray-900">About Doccure</h3>
+                <p class="gray-600">Modern healthcare platform designed to simplify the way patients connect with doctors, clinics & medical services.</p>
+                <div class="about-img d-flex align-items-center gap-2 justify-content-center">
+                    <a href="https://doccure.dreamstechnologies.com/html/template/assets/img/banner/about-img-1.jpg" target="_blank"><img src="images/about-img-1.webp" alt="" class="img-fluid rounded"></a>
+                    <a href="https://doccure.dreamstechnologies.com/html/template/assets/img/banner/about-img-2.jpg" target="_blank"><img src="images/about-img-2.webp" alt="" class="img-fluid rounded"></a>
+                    <a href="https://doccure.dreamstechnologies.com/html/template/assets/img/banner/about-img-3.jpg" target="_blank"><img src="images/about-img-3.webp" alt="" class="img-fluid rounded"></a>
+                </div>
+			</div>
+            <!-- Item 2 -->
+            <div class="about-item pb-4 mb-4">
+                <h3 class="title mb-3 fs-5 fw-bold">Our Locations</h3>
+                <div class="loction-item mb-3">
+                    <h4 class="title fs-6 fw-bold mb-1 gray-900">California</h4>
+                    <p class="location fs-6 gray-600">1250 Sunset, Los Angeles, CA</p>
+                </div>
+                <div class="loction-item">
+                    <h4 class="title fs-6 fw-bold mb-1 gray-900">Los Angeles</h4>
+                    <p class="location fs-6 gray-600">669 Boulevard, Los Angeles</p>
+                </div>
+			</div>
+            <!-- Item 3 -->
+            <div class="about-item pb-4 mb-4">
+                <h3 class="title mb-3 fs-5 fw-bold gray-900">Contact Information</h3>
+                <div class="support-item mb-3 d-flex gap-2 align-items-center">
+                    <!-- avatar-lg -->
+                    <div class="avatar text-white bag-primary d-flex align-items-center justify-content-center rounded-circle">
+                        <i class="fa-regular fa-message"></i>
+                    </div>
+                    <div>
+                        <p class="fs-6 fw-normal mb-1 gray-900">General Inquiries</p>
+                        <h5 class="fs-6 fw-semibold"><a href="#" class="text-decoration-none">info@example.com</a></h5>
+                    </div>
+                </div>
+                <div class="support-item d-flex gap-2 align-items-center">
+                    <div class="avatar text-white bag-primary d-flex align-items-center justify-content-center rounded-circle">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div>
+                        <p class="fs-6 fw-normal mb-1 gray-900">Emergency Cases</p>
+                        <h5 class="fs-6 fw-semibold"><a href="#" class="text-decoration-none">+1 24565 89856</a></h5>
+                    </div>
+                </div>
+			</div>
+            <!-- Item 4 -->
+            <div class="about-item border-0 social">
+                <h3 class="title mb-3 fs-5 fw-bold gray-900">Follow Us</h3>
+                <ul class="d-flex align-items-center gap-2 social ps-0">
+                    <li>
+                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <img src="images/offcanvas-bg.webp" alt="" class="w-100 position-absolute z-0 bottom-0 start-0 end-0">
+    </div>
+    <!--  Breadcrumb -->
+    <div class="breadcrumb-bar position-relative overflow-hidden z-1">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-12 text-center">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex justify-content-center align-items-center mb-1 fs-6">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="breadcrumb-item d-flex align-items-center"><a href="#"
+                                    class="gray-600">Doctor</a></li>
+                            <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Dashboard
+                            </li>
+                        </ol>
+                        <h2 class="breadcrumb-title fw-bold gray-900">Dashboard</h2>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="breadcrumb-bg">
+            <img src="images/breadcrumb-bg-01.png" alt="img" class="position-absolute z-n1 top-0 start-0 h-165">
+            <img src="images/breadcrumb-bg-02.png" alt="img" class="position-absolute z-n1 top-0 end-0 h-165">
+            <img src="images/breadcrumb-icon.webp" alt="img" class="position-absolute z-n1 breadcrumb-bg-03">
+            <img src="images/breadcrumb-icon.webp" alt="img" class="position-absolute z-n1 bottom-0 breadcrumb-bg-04">
+        </div>
+    </div>
+    <section class="doc-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xl-3">
+                    <!-- Profile sidebar -->
+                    <div class="profile-sidebar bg-white overflow-hidden mb-4">
+                        <div class="profile position-relative z-1 m-0">
+                            <div class="profile-info text-center">
+                                <a href="#" class="doc-img bg-white rounded-circle position-relative">
+                                    <img src="images/doctor-profile-img.webp" alt=""
+                                        class="rounded-circle object-fit-cover">
+                                    <i class="fa-solid fa-circle-check position-absolute bottom-0 rounded-circle"></i>
+                                </a>
+                                <div class="details">
+                                    <h3><a href="#" class="gray-900 fw-semibold mb-2 d-block text-truncate">Dr Edalin Hendry</a>
+                                    </h3>
+                                    <h5 class="gray-600 fw-normal mb-0">BDS, MDS - Oral & Maxillofacial Surgery</h5>
+                                    <span
+                                        class="badge doctor-role-badge d-inline-flex align-items-center gray-600 fw-medium"><i
+                                            class="fa-solid fa-circle"></i>Dentist</span>
+                                </div>
+                                <img src="images/doctor-sidebar-bg.webp" alt=""
+                                    class="bg-img position-absolute z-n1 top-0 start-0 w-100">
+                            </div>
+                            <div class="available mb-0">
+                                <label class="form-label gray-900 fw-medium">Availability <span
+                                        class="text-danger">*</span></label>
+                                <div class="select-box position-relative">
+                                    <select class="select form-control">
+                                        <option value="">I am Available Now</option>
+                                        <option value="">Not Available</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="menu position-sticky">
+                                <ul class="ps-0">
+                                    <li class="mb-1 active">
+                                        <a href="doctor-dashboard.html"
+                                            class="d-flex align-items-center justify-content-between text-white">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fa-solid fa-braille"></i>
+                                                <p class="mb-0">Dashboard</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-clipboard-check"></i>
+                                                <p class="mb-0">Requests</p>
+                                            </div>
+                                            <span
+                                                class="text-white fw-medium rounded-circle d-flex align-items-center justify-content-center">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-calendar-check"></i>
+                                                <p class="mb-0">Appointments</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-calendar-days"></i>
+                                                <p class="mb-0">Available Timings</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-user-injured"></i>
+                                                <p class="mb-0">My Patients</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-clock"></i>
+                                                <p class="mb-0">Specialties & Services</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-star"></i>
+                                                <p class="mb-0">Reviews</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-user-check"></i>
+                                                <p class="mb-0">Accounts</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <p class="mb-0">Invoices</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-money-bill-1"></i>
+                                                <p class="mb-0">Payout Settings</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-regular fa-comments"></i>
+                                                <p class="mb-0">Message</p>
+                                            </div>
+                                            <span
+                                                class="text-white fw-medium rounded-circle d-flex align-items-center justify-content-center">2</span>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-border-all"></i>
+                                                <p class="mb-0">Blog</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-gear"></i>
+                                                <p class="mb-0">Profile Settings</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-shield-halved"></i>
+                                                <p class="mb-0">Social Media</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-key"></i>
+                                                <p class="mb-0">Change Password</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mb-1">
+                                        <a href="#" class="gray-900 d-flex align-items-center justify-content-between">
+                                            <div class="det d-flex align-items-center">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                                <p class="mb-0">Logout</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xl-9">
+                    <div class="row">
+                        <div class="col-xl-4 d-flex">
+                            <div class="dash-col w-100">
+                                <div class="dash-box d-flex align-items-center justify-content-between w-100 mb-4 p-4">
+                                    <div class="info">
+                                        <h6 class="fs-6 gray-900 fw-medium">Total Patient</h6>
+                                        <h4 class="fs-4 gray-900 fw-semibold">978</h4>
+                                        <p class="text-green d-inline-flex align-items-center mb-0"><i
+                                                class="fa-solid fa-arrow-up"></i>15% From Yesterday</p>
+                                    </div>
+                                    <div class="icon d-flex align-items-center justify-content-center gray-600">
+                                        <i class="fa-solid fa-user-injured"></i>
+                                    </div>
+                                </div>
+                                <div class="dash-box d-flex align-items-center justify-content-between w-100 mb-4 p-4">
+                                    <div class="info">
+                                        <h6 class="fs-6 gray-900 fw-medium">Patients Today</h6>
+                                        <h4 class="fs-4 gray-900 fw-semibold">80</h4>
+                                        <p class="text-red d-inline-flex align-items-center mb-0"><i
+                                                class="fa-solid fa-arrow-up"></i>15% From Yesterday</p>
+                                    </div>
+                                    <div class="icon d-flex align-items-center justify-content-center gray-600">
+                                        <i class="fa-solid fa-user-clock"></i>
+                                    </div>
+                                </div>
+                                <div class="dash-box d-flex align-items-center justify-content-between w-100 mb-4 p-4">
+                                    <div class="info">
+                                        <h6 class="fs-6 gray-900 fw-medium">Appointments Today</h6>
+                                        <h4 class="fs-4 gray-900 fw-semibold">50</h4>
+                                        <p class="text-green d-inline-flex align-items-center mb-0"><i
+                                                class="fa-solid fa-arrow-up"></i>20% From Yesterday</p>
+                                    </div>
+                                    <div class="icon d-flex align-items-center justify-content-center gray-600">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 d-flex">
+                            <div class="dash-card w-100 mb-4 p-0">
+                                <div class="header d-flex align-items-center justify-content-between flex-wrap">
+                                    <h5 class="fs-5 fw-semibold gray-900 mb-0">Appointment</h5>
+                                    <div class="dropdown">
+                                        <a class="btn dropdown-toggle position-relative d-flex align-items-center"
+                                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Last 7 Days
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-end">
+                                            <li><a class="dropdown-item" href="#">Today</a></li>
+                                            <li><a class="dropdown-item" href="#">This Month</a></li>
+                                            <li><a class="dropdown-item" href="#">Last 7 Days</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="body">
+                                    <div class="table-responsive">
+                                        <table class="dash-table mb-0 gray-900 w-100">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="profile-info d-flex align-items-center">
+                                                            <a href="#"
+                                                                class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                                                <img src="images/profile-01.webp" alt=""
+                                                                    class="img-fluid">
+                                                            </a>
+                                                            <div class="details">
+                                                                <p class="mb-0 primary fw-medium">#Apt0001</p>
+                                                                <h5 class="fs-6 mb-0 fw-bold"><a href="#"
+                                                                        class="gray-900">Adrian Marshall</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <h6 class="gray-900 fw-normal mb-0">11 Nov 2024 10.45 AM</h6>
+                                                            <span
+                                                                class="badge table-badge text-white bag-primary fw-medium">General</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="actions d-flex align-items-center">
+                                                            <a href="#" class="icon-true me-2 text-green rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-check"></i></a>
+                                                            <a href="#" class="icon-false text-red rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-xmark"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="profile-info d-flex align-items-center">
+                                                            <a href="#"
+                                                                class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                                                <img src="images/profile-02.webp" alt=""
+                                                                    class="img-fluid">
+                                                            </a>
+                                                            <div class="details">
+                                                                <p class="mb-0 primary fw-medium">#Apt0002</p>
+                                                                <h5 class="fs-6 mb-0 fw-bold"><a href="#"
+                                                                        class="gray-900">Kelly Stevens</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <h6 class="gray-900 fw-normal mb-0">10 Nov 2024 11.00 AM</h6>
+                                                            <span
+                                                                class="badge table-badge text-white bag-primary fw-medium">Clinic Consulting</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="actions d-flex align-items-center">
+                                                            <a href="#" class="icon-true me-2 text-green rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-check"></i></a>
+                                                            <a href="#" class="icon-false text-red rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-xmark"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="profile-info d-flex align-items-center">
+                                                            <a href="#"
+                                                                class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                                                <img src="images/profile-03.webp" alt=""
+                                                                    class="img-fluid">
+                                                            </a>
+                                                            <div class="details">
+                                                                <p class="mb-0 primary fw-medium">#Apt0003</p>
+                                                                <h5 class="fs-6 mb-0 fw-bold"><a href="#"
+                                                                        class="gray-900">Samuel Anderson</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <h6 class="gray-900 fw-normal mb-0">03 Nov 2024 02.00 PM</h6>
+                                                            <span
+                                                                class="badge table-badge text-white bag-primary fw-medium">General</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="actions d-flex align-items-center">
+                                                            <a href="#" class="icon-true me-2 text-green rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-check"></i></a>
+                                                            <a href="#" class="icon-false text-red rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-xmark"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="profile-info d-flex align-items-center">
+                                                            <a href="#"
+                                                                class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                                                <img src="images/profile-04.webp" alt=""
+                                                                    class="img-fluid">
+                                                            </a>
+                                                            <div class="details">
+                                                                <p class="mb-0 primary fw-medium">#Apt0004</p>
+                                                                <h5 class="fs-6 mb-0 fw-bold"><a href="#"
+                                                                        class="gray-900">Catherine Griffin</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <h6 class="gray-900 fw-normal mb-0">01 Nov 2024 04.00 PM</h6>
+                                                            <span
+                                                                class="badge table-badge text-white bag-primary fw-medium">Clinic Consulting</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="actions d-flex align-items-center">
+                                                            <a href="#" class="icon-true me-2 text-green rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-check"></i></a>
+                                                            <a href="#" class="icon-false text-red rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-xmark"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="profile-info d-flex align-items-center">
+                                                            <a href="#"
+                                                                class="d-flex align-items-center justify-content-center flex-shrink-0">
+                                                                <img src="images/profile-05.webp" alt=""
+                                                                    class="img-fluid">
+                                                            </a>
+                                                            <div class="details">
+                                                                <p class="mb-0 primary fw-medium">#Apt0005</p>
+                                                                <h5 class="fs-6 mb-0 fw-bold"><a href="#"
+                                                                        class="gray-900">Robert Hutchinson</a></h5>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <h6 class="gray-900 fw-normal mb-0">28 Oct 2024 05.30 PM</h6>
+                                                            <span
+                                                                class="badge table-badge text-white bag-primary fw-medium">General</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="actions d-flex align-items-center">
+                                                            <a href="#" class="icon-true me-2 text-green rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-check"></i></a>
+                                                            <a href="#" class="icon-false text-red rounded-circle d-flex align-items-center justify-content-center"><i
+                                                                    class="fa-solid fa-xmark"></i></a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 d-flex"></div>
+                        <div class="col-xl-7 d-flex"></div>
+                        <div class="col-xl-7 d-flex"></div>
+                        <div class="col-xl-5 d-flex"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="footer position-relative z-1">
+        <!-- Footer top -->
+        <div class="footer-top position-relative z-1 overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="footer-menu mb-2">
+                                    <h6 class="title gray-900 fw-bold fs-5 mb-4">Company</h6>
+                                    <ul class="p-0 m-0">
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">About</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Features</a></li>
+                                        <li class="mb-3 fs-6"><a href="doctor-dashboard.html" class="gray-900">Works</a></li>
+                                        <li class="mb-3 fs-6"><a href="doctor-dashboard.html" class="gray-900">Careers</a></li>
+                                        <li class="mb-3 fs-6"><a href="contact-us.html" class="gray-900">Locations</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="footer-menu mb-20">
+                                    <h6 class="title gray-900 fw-bold fs-5 mb-4">Treatments</h6>
+                                    <ul class="p-0 m-0">
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Dental</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Cardiac</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Spinal Cord</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Hair Growth</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Anemia & Disorder</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="footer-menu mb-20">
+                                    <h6 class="title gray-900 fw-bold fs-5 mb-4">Specialities</h6>
+                                    <ul class="p-0 m-0">
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Transplant</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Cardiologist</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Oncology</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Pediatrics</a></li>
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Gynacology</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="footer-menu mb-20">
+                                    <h6 class="title gray-900 fw-bold fs-5 mb-4">Utilites</h6>
+                                    <ul class="p-0 m-0">
+                                        <li class="mb-3 fs-6"><a href="#" class="gray-900">Pricing</a></li>
+                                        <li class="mb-3 fs-6"><a href="contact-us.html" class="gray-900">Contact</a></li>
+                                        <li class="mb-3 fs-6"><a href="contact-us.html" class="gray-900">Request A Quote</a></li>
+                                        <li class="mb-3 fs-6"><a href="doctor-dashboard.html" class="gray-900">Premium Membership</a></li>
+                                        <li class="mb-3 fs-6"><a href="doctor-dashboard.html" class="gray-900">Integrations</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-7">
+                        <div class="footer-menu">
+                            <h6 class="title gray-900 fw-bold fs-5 mb-4">Newsletter</h6>
+                            <p class="mb-2 gray-600">Subscribe & Stay Updated from the Doccure</p>
+                            <div class="subscribe mb-4 position-relative">
+                                <form action="#" method="post">
+                                    <input type="email" class="form-control fd-14" placeholder="Enter Email Address">
+                                    <button type="submit" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center position-absolute"><i class="fa-solid fa-paper-plane me-1"></i>Send</button>
+                                </form>
+                            </div>
+                            <div class="social">
+                                <h6 class="mb-3 footer-title gray-900 fw-bold fs-5">Connect With Us</h6>
+                                <ul class="d-flex align-items-center gap-2 social ps-0">
+                                    <li class="">
+                                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-x-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="social-icon gray-600 d-flex align-items-center justify-content-center rounded-circle"><i class="fa-brands fa-pinterest"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <!-- Copyright -->
+                <div class="copyright d-flex align-items-center justify-content-center flex-wrap gap-3 pt-3 pb-2">
+                    <div class="copyright-text mb-0">
+                        <p class="fs-6 gray-900 mb-0">Copyright © 2025 Doccure. All Rights Reserved</p>
+                    </div>
+                    <!-- Copyright Menu -->
+                    <div class="copyright-menu">
+                        <ul class="policy-menu mb-0 p-0 fs-6 d-flex align-items-center justify-content-between">
+                            <li class="d-flex align-items-center justify-content-between">
+                                <a href="#" class="gray-900">Legal Notice</a>
+                                <i class="fa-solid fa-circle primary ms-2"></i>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <a href="#" class="gray-900">Privacy Policy</a>
+                                <i class="fa-solid fa-circle primary ms-2"></i>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <a href="#" class="gray-900">Refund Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="payment-method d-flex align-items-center justify-content-between mb-10">
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-01.svg" alt="Img"></a></li>
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-02.svg" alt="Img"></a></li>
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-03.svg" alt="Img"></a></li>
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-04.svg" alt="Img"></a></li>
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-05.svg" alt="Img"></a></li>
+                        <li><a href="#"><img src="https://doccure.dreamstechnologies.com/html/template/assets/img/icons/card-06.svg" alt="Img"></a></li>
+                    </ul>
+                </div>				
+            </div>
+        </div>
+	</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/theia-sticky-sidebar/1.7.0/theia-sticky-sidebar.min.js"></script>
+
+</body>
+
+</html>
