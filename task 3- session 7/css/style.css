@@ -1,145 +1,229 @@
+/* ===== Base ===== */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
 }
-.d-flex{ display: flex;}
-.rel{ position: relative;}
-.abs{ position: absolute;}
+
+:root{
+    --primary: #0A6FA8;
+    --text-muted: #5A6780;
+    --text-dark: #1E335C;
+    --white: #FFFFFF;
+    --flip-duration: 0.5s;
+}
+
+.d-flex{ display: flex; }
+.rel{ position: relative; }
+.abs{ position: absolute; }
+
+/* ===== Layout ===== */
 .sec{
     width: 50%;
     height: 100vh;
     margin: auto;
     background: url("../images/background.jpg") center / cover no-repeat;
 }
+
 .content{
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
 .card{
     width: 70%;
     height: 85%;
     border-radius: 25px;
     margin: auto;
     overflow: hidden;
+    perspective: 1000px;
 }
-.front,.back{ 
-    height: 100%;
+
+/* ===== Faces ===== */
+.front,
+.back{
     width: 100%;
+    height: 100%;
     backface-visibility: hidden;
-    transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+    transition: transform var(--flip-duration) ease;
 }
+
 .front{
-    background: url("../images/card1-front.jpg") center / cover no-repeat;   
+    background: url("../images/card1-front.jpg") center / cover no-repeat;
 }
-.button a{ 
-    color: #19ABFE;
-    text-decoration: none;
+
+/* Dark gradient on the bottom of the image so the white title stays readable */
+.front::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 60%);
+    pointer-events: none;
 }
-.button{
-    border: 2px solid #19ABFE;
-    font-size: 15px;
-    padding: 13px 9px 13px 8px;    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    right: 10%;
-    bottom: 10%;
-    cursor: pointer;
-    transition: all 0.4s;
-    align-items: center;
-    justify-content: center;
-}
-.text{
-    width: 49%;
-    text-align: justify;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 16px;
-    left: 11%;
-    bottom: 7%;
-    transition: all 0.4s;
-}
-.card:hover .front{ 
-    transform: rotateY(180deg);
-}
-.card:hover .text{
-    bottom: 50%;
-    color: #1E335C;
-} 
-.card:hover .back{
-    transform: rotateY(0deg);
-}
+
 .card .back{
-    background-color: #FFFFFF;
-    text-align: justify;
+    background-color: var(--white);
     padding: 11%;
+    text-align: left;
     transform: rotateY(180deg);
 }
+
 .back img{
+    display: block;
     width: 25%;
     margin-top: 23%;
     margin-bottom: 36%;
 }
+
 .back .info p{
-    color: #6C7994;
+    color: var(--text-muted);
     font-weight: 500;
     font-size: 13px;
     line-height: 1.6;
-    text-align: left;
 }
-/* Read more section */
+
+/* ===== Title ===== */
+.text{
+    width: 49%;
+    left: 11%;
+    bottom: 7%;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: left;
+    z-index: 2;
+    transition: bottom var(--flip-duration) ease, color var(--flip-duration) ease;
+}
+
+/* ===== Shared icon button ===== */
+.icon-btn{
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--primary);
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: width .4s ease, border-radius .4s ease, background-color .4s ease, color .4s ease;
+}
+
+/* Front flip button */
+.flip-btn{
+    right: 10%;
+    bottom: 10%;
+    z-index: 1;
+}
+
+.flip-btn i{
+    transform: rotate(45deg);
+}
+
+/* ===== Flip states =====
+   Hover applies only to devices that actually support hover.
+   .is-flipped is toggled by JS on touch devices.
+   :has(:focus-visible) flips the card when a keyboard user reaches something inside it. */
+@media (hover: hover){
+    .card:hover .front{ transform: rotateY(180deg); }
+    .card:hover .back{ transform: rotateY(0deg); }
+    .card:hover .text{
+        bottom: 50%;
+        color: var(--text-dark);
+    }
+}
+
+.card.is-flipped .front,
+.card:has(:focus-visible) .front{
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped .back,
+.card:has(:focus-visible) .back{
+    transform: rotateY(0deg);
+}
+
+.card.is-flipped .text,
+.card:has(:focus-visible) .text{
+    bottom: 50%;
+    color: var(--text-dark);
+}
+
+/* Focus ring for keyboard users */
+.icon-btn:focus-visible{
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* ===== Read More ===== */
 .back .read-more{
-    color: #19ABFE;
     right: 10%;
     bottom: 10%;
     align-items: center;
     justify-content: flex-end;
     gap: 35px;
-    cursor: pointer; 
+    color: var(--primary);
 }
-.back .read-more span{
-    font-weight: 400;
+
+.read-more > span{
     font-size: 16px;
-}
-.back .read-more:hover span{
-    opacity: 0;
-}
-.back .read-more .button{
-    color: #19ABFE;
-    padding: 14px 18px 14px 11px ;
-    width: 50px;
-    height: 50px;
-    transition: all 0.2s;
-}
-.back .read-more .button a{
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    width: 100%;
-    height: 100%;
-}
-.back .read-more .button .hidden-text{
     font-weight: 400;
-    font-size: 16px;
+    transition: opacity .3s ease;
+}
+
+.read-more .icon-btn{
+    color: var(--primary);
+}
+
+.hidden-text{
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
     opacity: 0;
-    width: 0;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1;
+    transition: max-width .4s ease, opacity .3s ease;
 }
-.back .read-more:hover .button a,
-.back .read-more:hover .hidden-text{
-    color: #FFFFFF;
+
+@media (hover: hover){
+    .read-more:hover > span{ opacity: 0; }
+
+    .read-more:hover .icon-btn{
+        width: 180px;
+        border-radius: 30px;
+        background-color: var(--primary);
+        color: var(--white);
+    }
+
+    .read-more:hover .hidden-text{
+        max-width: 120px;
+        opacity: 1;
+    }
 }
- .back .read-more:hover .button{
-    background-color: #19ABFE;
-    color: #FFFFFF;
-    width: 180px;
-    border-radius: 30px;
-    padding: 14px 25px;    
+
+/* ===== Reduced motion ===== */
+@media (prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        transition-duration: 0.01ms !important;
+    }
 }
-.back .read-more:hover .button .hidden-text{
-    opacity: 1;
-    width: fit-content;
+
+/* ===== Responsive ===== */
+@media (max-width: 768px){
+    .sec{ width: 100%; }
+    .card{
+        width: 90%;
+        height: 70vh;
+    }
+    .text{ width: 75%; }
 }
