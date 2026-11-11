@@ -1,27 +1,25 @@
 /* ===== Base ===== */
-*{
-    padding: 0;
-    margin: 0;
+*,
+*::before,
+*::after{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: "Inter", sans-serif;
 }
 
 :root{
-    --bg-card: #FFFCDE;
+    --card-bg: #FFFCDE;
     --text: #000000;
     --text-muted: #4A4A4A;
     --accent: #0A6FA8;
-    --anim: 0.5s;
+    --speed: 0.5s;
 }
 
-.d-flex{ display: flex; }
-.rel{ position: relative; }
-.abs{ position: absolute; }
-
 a{
-    text-decoration: none;
     color: var(--text);
     font-size: 18px;
+    text-decoration: none;
 }
 
 a:focus-visible{
@@ -30,115 +28,109 @@ a:focus-visible{
     border-radius: 4px;
 }
 
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ===== Layout ===== */
 .container{
-    width: 100%;
     height: 50vh;
     margin: 15% auto;
 }
 
 .cards{
-    width: 100%;
-    height: 100%;
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
 }
 
 .card{
+    position: relative;
     width: 21%;
     height: 100%;
     overflow: hidden;
-    cursor: pointer;
 }
 
 /* ===== Faces ===== */
-.front,
 .back{
-    width: 100%;
-    height: 100%;
-    transition: transform var(--anim) ease;
+    position: absolute;
+    inset: 0;
+    background-color: var(--card-bg);
+    color: var(--text);
+    text-align: center;
 }
 
 .front{
-    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    display: block;
+    cursor: pointer;
+    transition: transform var(--speed) ease;
 }
 
 .front img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    transition: transform var(--anim) ease, bottom var(--anim) ease;
-}
-
-.back{
-    background-color: var(--bg-card);
-    color: var(--text);
-    text-align: center;
 }
 
 /* ===== Card content ===== */
-.back .info{
-    margin-top: 145%;
+.info{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 4px;
-    transition: margin-top var(--anim) ease, opacity var(--anim) ease;
+    margin-top: 145%;
+    transition: margin-top var(--speed) ease;
 }
 
-.back h2{
+.info h2{
     font-size: 13px;
     font-weight: 600;
 }
 
-.back p{
+.info p{
+    margin-bottom: 5px;
     color: var(--text-muted);
     font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 5px;
 }
 
-.back ul{
-    list-style-type: none;
-    gap: 7px;
+.socials{
+    display: flex;
     justify-content: center;
+    gap: 7px;
+    list-style: none;
 }
 
-/* ===== Hover / open state =====
-   Desktop: hover. Touch: .is-open added by JS. */
+/* ===== Open state =====
+   Hover applies only to devices that support it.
+   Tapping the image checks the hidden checkbox, which opens the card on every device. */
+.card__toggle:checked ~ .front,
+.card__toggle:focus-visible ~ .front{
+    transform: translateY(-18%) scale(0.5);
+}
+
+.card__toggle:checked ~ .back .info{
+    margin-top: 85%;
+}
+
 @media (hover: hover){
-    .card:hover .front img{
-        transform: scale(0.5);
-        bottom: 18%;
+    .card:hover .front{
+        transform: translateY(-18%) scale(0.5);
     }
-    .card:hover .back .info{
+
+    .card:hover .info{
         margin-top: 85%;
     }
-}
-
-.card.is-open .front img{
-    transform: scale(0.5);
-    bottom: 18%;
-}
-
-.card.is-open .back .info{
-    margin-top: 85%;
-}
-
-/* Keyboard users: focus opens the card the same way hover does */
-.card:focus-visible{
-    outline: 3px solid var(--accent);
-    outline-offset: 3px;
-}
-
-.card:focus-visible .front img{
-    transform: scale(0.5);
-    bottom: 18%;
-}
-
-.card:focus-visible .back .info{
-    margin-top: 85%;
 }
 
 /* ===== Reduced motion ===== */
@@ -152,16 +144,18 @@ a:focus-visible{
 
 /* ===== Responsive ===== */
 @media (max-width: 768px){
+    .container{
+        margin: 10% auto;
+    }
+
     .cards{
         flex-wrap: wrap;
         height: auto;
         gap: 16px;
     }
+
     .card{
         width: 45%;
         height: 260px;
-    }
-    .container{
-        margin: 10% auto;
     }
 }
