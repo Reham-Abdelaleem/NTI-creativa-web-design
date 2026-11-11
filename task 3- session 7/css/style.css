@@ -1,5 +1,7 @@
 /* ===== Base ===== */
-*{
+*,
+*::before,
+*::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,12 +13,20 @@
     --text-muted: #5A6780;
     --text-dark: #1E335C;
     --white: #FFFFFF;
-    --flip-duration: 0.5s;
+    --flip-speed: 0.5s;
 }
 
-.d-flex{ display: flex; }
-.rel{ position: relative; }
-.abs{ position: absolute; }
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* ===== Layout ===== */
 .sec{
@@ -27,100 +37,94 @@
 }
 
 .content{
-    width: 100%;
+    display: flex;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgb(255 255 255 / 0.5);
 }
 
+/* ===== Card ===== */
 .card{
+    position: relative;
     width: 70%;
     height: 85%;
-    border-radius: 25px;
     margin: auto;
+    border-radius: 25px;
     overflow: hidden;
     perspective: 1000px;
 }
 
-/* ===== Faces ===== */
 .front,
 .back{
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    transition: transform var(--flip-duration) ease;
+    transition: transform var(--flip-speed) ease;
 }
 
 .front{
     background: url("../images/card1-front.jpg") center / cover no-repeat;
 }
 
-/* Dark gradient on the bottom of the image so the white title stays readable */
+/* Dark fade at the bottom so the white title stays readable */
 .front::after{
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 60%);
+    background: linear-gradient(to top, rgb(0 0 0 / 0.55), transparent 60%);
     pointer-events: none;
 }
 
-.card .back{
-    background-color: var(--white);
+.back{
     padding: 11%;
+    background-color: var(--white);
     text-align: left;
     transform: rotateY(180deg);
 }
 
-.back img{
-    display: block;
+.back > img{
     width: 25%;
-    margin-top: 23%;
-    margin-bottom: 36%;
+    margin: 23% 0 36%;
 }
 
-.back .info p{
+.back-text{
     color: var(--text-muted);
-    font-weight: 500;
     font-size: 13px;
+    font-weight: 500;
     line-height: 1.6;
 }
 
 /* ===== Title ===== */
-.text{
-    width: 49%;
+.title{
+    position: absolute;
     left: 11%;
     bottom: 7%;
-    color: var(--white);
-    font-weight: 700;
-    font-size: 16px;
-    text-align: left;
     z-index: 2;
-    transition: bottom var(--flip-duration) ease, color var(--flip-duration) ease;
+    width: 49%;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    transition: bottom var(--flip-speed) ease, color var(--flip-speed) ease;
 }
 
-/* ===== Shared icon button ===== */
-.icon-btn{
-    width: 50px;
-    height: 50px;
-    padding: 0;
-    border: 2px solid var(--primary);
-    border-radius: 50%;
-    background: transparent;
-    color: var(--primary);
-    font-size: 15px;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: width .4s ease, border-radius .4s ease, background-color .4s ease, color .4s ease;
-}
-
-/* Front flip button */
+/* ===== Flip button ===== */
 .flip-btn{
+    position: absolute;
     right: 10%;
     bottom: 10%;
     z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: 15px;
+    cursor: pointer;
 }
 
 .flip-btn i{
@@ -128,82 +132,99 @@
 }
 
 /* ===== Flip states =====
-   Hover applies only to devices that actually support hover.
-   .is-flipped is toggled by JS on touch devices.
-   :has(:focus-visible) flips the card when a keyboard user reaches something inside it. */
+   The checkbox works on every device, touch included.
+   Hover is added only on devices that support it. */
+.flip-toggle:checked ~ .front{
+    transform: rotateY(180deg);
+}
+
+.flip-toggle:checked ~ .back{
+    transform: rotateY(0);
+}
+
+.flip-toggle:checked ~ .title{
+    bottom: 50%;
+    color: var(--text-dark);
+}
+
 @media (hover: hover){
-    .card:hover .front{ transform: rotateY(180deg); }
-    .card:hover .back{ transform: rotateY(0deg); }
-    .card:hover .text{
+    .card:hover .front{
+        transform: rotateY(180deg);
+    }
+
+    .card:hover .back{
+        transform: rotateY(0);
+    }
+
+    .card:hover .title{
         bottom: 50%;
         color: var(--text-dark);
     }
 }
 
-.card.is-flipped .front,
-.card:has(:focus-visible) .front{
-    transform: rotateY(180deg);
-}
-
-.card.is-flipped .back,
-.card:has(:focus-visible) .back{
-    transform: rotateY(0deg);
-}
-
-.card.is-flipped .text,
-.card:has(:focus-visible) .text{
-    bottom: 50%;
-    color: var(--text-dark);
-}
-
-/* Focus ring for keyboard users */
-.icon-btn:focus-visible{
+/* Keyboard focus on the flip button */
+.flip-toggle:focus-visible ~ .front .flip-btn{
     outline: 3px solid var(--primary);
     outline-offset: 3px;
 }
 
 /* ===== Read More ===== */
-.back .read-more{
+.read-more{
+    position: absolute;
     right: 10%;
     bottom: 10%;
+    display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 35px;
     color: var(--primary);
-}
-
-.read-more > span{
     font-size: 16px;
-    font-weight: 400;
-    transition: opacity .3s ease;
 }
 
-.read-more .icon-btn{
-    color: var(--primary);
+.read-more__label{
+    transition: opacity 0.3s ease;
 }
 
-.hidden-text{
+.read-more__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    gap: 7px;
+    padding: 0 12px;
+    transition: width 0.4s ease, border-radius 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.read-more__pill-label{
     max-width: 0;
     overflow: hidden;
     white-space: nowrap;
     opacity: 0;
-    font-size: 16px;
     font-weight: 400;
-    line-height: 1;
-    transition: max-width .4s ease, opacity .3s ease;
+    transition: max-width 0.4s ease, opacity 0.3s ease;
+}
+
+.read-more:focus-visible{
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 @media (hover: hover){
-    .read-more:hover > span{ opacity: 0; }
+    .read-more:hover .read-more__label{
+        opacity: 0;
+    }
 
-    .read-more:hover .icon-btn{
+    .read-more:hover .read-more__btn{
         width: 180px;
         border-radius: 30px;
         background-color: var(--primary);
         color: var(--white);
     }
 
-    .read-more:hover .hidden-text{
+    .read-more:hover .read-more__pill-label{
         max-width: 120px;
         opacity: 1;
     }
@@ -221,9 +242,11 @@
 /* ===== Responsive ===== */
 @media (max-width: 768px){
     .sec{ width: 100%; }
+
     .card{
         width: 90%;
         height: 70vh;
     }
-    .text{ width: 75%; }
+
+    .title{ width: 75%; }
 }
