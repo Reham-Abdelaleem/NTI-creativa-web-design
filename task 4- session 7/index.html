@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
-    <title>Card/Image hover animation</title>
 </head>
 <body>
-    <section class="container">
-        <div class="cards d-flex">
+    <main class="container">
+        <div class="cards">
 
             <!-- Dewey Bruen's card -->
-            <article class="card rel" tabindex="0">
-                <div class="back abs">
-                    <div class="info d-flex">
+            <article class="card">
+                <input type="checkbox" id="dewey" class="card__toggle visually-hidden">
+                <div class="back">
+                    <div class="info">
                         <h2>Dewey Bruen</h2>
                         <p>Founder</p>
-                        <ul class="d-flex">
+                        <ul class="socials">
                             <li><a href="#" aria-label="Dewey Bruen on Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Dewey Bruen on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Dewey Bruen on LinkedIn"><i class="fa-brands fa-square-linkedin" aria-hidden="true"></i></a></li>
@@ -28,18 +29,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="front abs">
+                <label for="dewey" class="front">
                     <img src="images/dewey.jpg" alt="Dewey Bruen">
-                </div>
+                </label>
             </article>
 
             <!-- Shannon O'Conner's card -->
-            <article class="card rel" tabindex="0">
-                <div class="back abs">
-                    <div class="info d-flex">
+            <article class="card">
+                <input type="checkbox" id="shannon" class="card__toggle visually-hidden">
+                <div class="back">
+                    <div class="info">
                         <h2>Shannon O'Conner</h2>
                         <p>Co Founder</p>
-                        <ul class="d-flex">
+                        <ul class="socials">
                             <li><a href="#" aria-label="Shannon O'Conner on Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Shannon O'Conner on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Shannon O'Conner on LinkedIn"><i class="fa-brands fa-square-linkedin" aria-hidden="true"></i></a></li>
@@ -47,18 +49,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="front abs">
+                <label for="shannon" class="front">
                     <img src="images/shannon.jpg" alt="Shannon O'Conner">
-                </div>
+                </label>
             </article>
 
             <!-- Amber Zulauf's card -->
-            <article class="card rel" tabindex="0">
-                <div class="back abs">
-                    <div class="info d-flex">
+            <article class="card">
+                <input type="checkbox" id="amber" class="card__toggle visually-hidden">
+                <div class="back">
+                    <div class="info">
                         <h2>Amber Zulauf</h2>
                         <p>UX Designer</p>
-                        <ul class="d-flex">
+                        <ul class="socials">
                             <li><a href="#" aria-label="Amber Zulauf on Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Amber Zulauf on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Amber Zulauf on LinkedIn"><i class="fa-brands fa-square-linkedin" aria-hidden="true"></i></a></li>
@@ -66,18 +69,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="front abs">
+                <label for="amber" class="front">
                     <img src="images/amber.jpg" alt="Amber Zulauf">
-                </div>
+                </label>
             </article>
 
             <!-- Kenny Cassin's card -->
-            <article class="card rel" tabindex="0">
-                <div class="back abs">
-                    <div class="info d-flex">
+            <article class="card">
+                <input type="checkbox" id="kenny" class="card__toggle visually-hidden">
+                <div class="back">
+                    <div class="info">
                         <h2>Kenny Cassin</h2>
                         <p>UI Designer</p>
-                        <ul class="d-flex">
+                        <ul class="socials">
                             <li><a href="#" aria-label="Kenny Cassin on Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Kenny Cassin on Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                             <li><a href="#" aria-label="Kenny Cassin on LinkedIn"><i class="fa-brands fa-square-linkedin" aria-hidden="true"></i></a></li>
@@ -85,29 +89,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="front abs">
+                <label for="kenny" class="front">
                     <img src="images/kenny.jpg" alt="Kenny Cassin">
-                </div>
+                </label>
             </article>
 
         </div>
-    </section>
-
-    <script>
-        // On touch devices there is no hover, so tapping a card toggles it open
-        const cards = document.querySelectorAll('.card');
-        const isTouch = window.matchMedia('(hover: none)').matches;
-
-        if (isTouch) {
-            cards.forEach(card => {
-                card.addEventListener('click', (e) => {
-                    if (e.target.closest('a')) return;
-                    const wasOpen = card.classList.contains('is-open');
-                    cards.forEach(c => c.classList.remove('is-open'));
-                    if (!wasOpen) card.classList.add('is-open');
-                });
-            });
-        }
-    </script>
+    </main>
 </body>
 </html>
