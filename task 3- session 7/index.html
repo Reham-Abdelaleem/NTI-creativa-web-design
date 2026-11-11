@@ -3,60 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Sector Development Program</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
-    <title>Card Flip Animation</title>
 </head>
 <body>
-    <section class="sec">
-        <div class="content d-flex">
-            <div class="card rel" id="card">
+    <main class="sec">
+        <div class="content">
+            <div class="card">
+                <input type="checkbox" id="flip" class="flip-toggle">
 
                 <!-- Card back -->
-                <div class="back abs">
+                <div class="back">
                     <img src="images/icon.png" alt="">
-                    <div class="info">
-                        <p>The Program aims to develop a diversified and effective financial sector to support the development of the Saudi Arabia's economy.</p>
-                    </div>
-                    <div class="read-more abs d-flex">
-                        <span aria-hidden="true">Read More</span>
-                        <a href="#" class="icon-btn d-flex">
-                            <span class="hidden-text">Read More</span>
+                    <p class="back-text">The Program aims to develop a diversified and effective financial sector to support the development of the Saudi Arabia's economy.</p>
+                    <a href="#" class="read-more">
+                        <span class="read-more__label" aria-hidden="true">Read More</span>
+                        <span class="read-more__btn">
+                            <span class="read-more__pill-label">Read More</span>
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
+                        </span>
+                    </a>
                 </div>
 
                 <!-- Card front -->
-                <div class="front abs">
-                    <button type="button" class="icon-btn flip-btn abs" aria-label="Flip card">
+                <div class="front">
+                    <label for="flip" class="flip-btn">
+                        <span class="visually-hidden">Show details</span>
                         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-                    </button>
+                    </label>
                 </div>
 
-                <!-- Text animation -->
-                <div class="text abs">
-                    <h2>Financial Sector Development Program</h2>
-                </div>
-
+                <h2 class="title">Financial Sector Development Program</h2>
             </div>
         </div>
-    </section>
-
-    <script>
-        const card = document.getElementById('card');
-        const isTouch = window.matchMedia('(hover: none)').matches;
-
-        // On touch devices there is no hover, so tapping the card toggles the flip
-        if (isTouch) {
-            card.addEventListener('click', (e) => {
-                if (e.target.closest('a')) return;
-                card.classList.toggle('is-flipped');
-            });
-        }
-    </script>
+    </main>
 </body>
 </html>
