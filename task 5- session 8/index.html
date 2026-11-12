@@ -3,32 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Shopery | Organic eCommerce</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
-    <title>Shopery</title>
 </head>
 <body>
+
     <!-- ==== Header ==== -->
-    <!-- First header --> 
-    <section class="nav-one container-full">
-        <nav class="container d-flex py-1">
-                <div class="location d-flex items-center">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
-                </div>
-                <div class="nav-right d-flex">
-                    <div class="selection d-flex">
-                        <select name="language" id="lang" class="select-box">
+    <header class="site-header">
+
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__location">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                    Store Location: Lincoln- 344, Illinois, Chicago, USA
+                </p>
+
+                <div class="topbar__right">
+                    <div class="topbar__selects">
+                        <label class="visually-hidden" for="lang">Language</label>
+                        <select id="lang" class="select-box">
                             <option value="eng">Eng</option>
                             <option value="AR">AR</option>
                             <option value="Fr">Fr</option>
                             <option value="de">DE</option>
                             <option value="esp">ESP</option>
                         </select>
-                        <select name="country" id="country" class="select-box">
+
+                        <label class="visually-hidden" for="country">Currency</label>
+                        <select id="country" class="select-box">
                             <option value="USD">USD</option>
                             <option value="USA">USA</option>
                             <option value="Aus">Aus</option>
@@ -36,1251 +43,498 @@
                             <option value="UK">UK</option>
                         </select>
                     </div>
-                    <div class="d-flex auth-links">
+
+                    <div class="auth-links">
                         <a href="#">Sign In</a>
-                        <span>/</span>
+                        <span aria-hidden="true">/</span>
                         <a href="#">Sign Up</a>
                     </div>
                 </div>
-        </nav>
-    </section> 
-    <!-- Second header -->
-    <section class="nav-two container-full">
-        <nav class="container d-flex py-1 my-1 items-center">
-            <div class="logo d-flex">
-                <img src="images/plant 1.jpg" alt="">
-                <p>Ecobazar</p>
             </div>
-            <div class="search-btn d-flex">
-                <!-- 10% icon , 80% input , 10% button -->
-                <div class="search-box ">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Search">
-                </div>
-                <button type="submit">Search</button>
-            </div>
-            <div class="nav-right items-center d-flex">
-                <i class="fa-regular fa-heart"></i>
-                <span class="divider"></span>
-                <div class="bag rel">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <div class="count abs">
-                        <p>2</p>
-                    </div>
-                </div>
-                <div class="total-cash">
-                    <p>Shopping cart:</p>
-                    <p class="price">$57.00</p>                    
-                </div>
-            </div>
-        </nav>
-    </section>    
-    <!-- Third header -->     
-    <section  class="nav-three container-full">
-        <nav class="container d-flex py-1">
-            <ul class="d-flex">
-                <li><a class="active" href="#">Home<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
-                <li><a href="#">Shop<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
-                <li><a href="#">Pages<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
-                <li><a href="#">Blog<span><i class="fa-solid fa-chevron-down"></i></span></a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="contact">
-                <i class="fa-solid fa-phone-volume"></i>
-                <span>(219) 555-0114</span>
-            </div>
-        </nav>                     
-    </section>
-    <!-- Section 1 -->
-    <section class="sec-1 container-full py-1">
-        <div class="container d-flex" >
-            <!-- img 1 -->
-            <div class="w-60 part-1">
-                <div class="info d-flex">
-                    <h2>Fresh & Healthy Organic Food</h2>
-                    <div class="sale">
-                        <p>Sale up to <span>30% OFF</span></p>
-                        <p>Free shipping on all your order.</p>
-                    </div>
-                    <div class="d-flex button items-center">
-                        <a href="#" class="d-flex">
-                            <p>Shop now</p>
-                            <i class="fa-solid fa-arrow-right"></i> 
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!--  img 2&3 -->
-            <div class="w-40 part-2 d-flex">
-                <!-- img 2 -->
-                <div class="div-1">
-                    <div class="info items-center">
-                        <p class="sale">Summer Sale</p>
-                        <h2>75% OFF</h2>
-                        <p class="only">Only Fruit & Vegetable</p>
-                        <div class="d-flex button items-center">
-                            <a href="#" class="d-flex">
-                                <p>Shop now</p>
-                                <i class="fa-solid fa-arrow-right"></i> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- img3 -->
-                <div class="div-2">
-                    <div class="info d-flex items-center">
-                        <p class="sale">Best Deal</p>
-                        <h2>Special Products Deal of the Month</h2>
-                        <div class="d-flex button items-center">
-                            <a href="#" class="d-flex">
-                                <p>Shop now</p>
-                                <i class="fa-solid fa-arrow-right"></i> 
-                            </a>
-                        </div>
-                    </div>
-                </div>                
-            </div>            
         </div>
-        <!-- Data -->
-        <div class="data container d-flex py-1 my-1">
-            <div class="d-flex items-center">
-                <i class="fa-solid fa-truck-fast"></i>
+
+        <div class="midbar">
+            <div class="container midbar__inner">
+                <a class="logo" href="#">
+                    <img src="images/plant 1.jpg" alt="" width="27" height="27">
+                    <span>Ecobazar</span>
+                </a>
+
+                <form class="search" role="search">
+                    <label class="visually-hidden" for="search">Search products</label>
+                    <div class="search__field">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input id="search" type="search" placeholder="Search">
+                    </div>
+                    <button class="search__btn" type="submit">Search</button>
+                </form>
+
+                <div class="cart">
+                    <button class="icon-btn" type="button" aria-label="Wishlist">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    </button>
+                    <span class="divider" aria-hidden="true"></span>
+                    <a class="cart__bag" href="#" aria-label="Shopping cart, 0 items">
+                        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                        <span class="cart__count" data-cart-count>0</span>
+                    </a>
+                    <p class="cart__total">
+                        <span>Shopping cart:</span>
+                        <strong data-cart-total>$0.00</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="mainnav" aria-label="Main">
+            <div class="container mainnav__inner">
+                <ul class="mainnav__links">
+                    <li><a class="is-active" href="#" aria-current="page">Home <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Shop <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Pages <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Blog <i class="fa-solid fa-chevron-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                <a class="contact" href="tel:+12195550114">
+                    <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
+                    (219) 555-0114
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ==== Hero ==== -->
+        <section class="container hero" aria-label="Featured offers">
+            <article class="hero__main">
+                <div class="hero__content">
+                    <h1>Fresh &amp; Healthy Organic Food</h1>
+                    <div class="hero__sale">
+                        <p>Sale up to <span class="badge">30% OFF</span></p>
+                        <p class="hero__note">Free shipping on all your order.</p>
+                    </div>
+                    <a class="btn-link btn-link--white" href="#">
+                        Shop now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+
+            <div class="hero__side">
+                <article class="promo promo--summer">
+                    <p class="promo__eyebrow">Summer Sale</p>
+                    <h2>75% OFF</h2>
+                    <p class="promo__text">Only Fruit &amp; Vegetable</p>
+                    <a class="btn-link" href="#">
+                        Shop now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
+
+                <article class="promo promo--deal">
+                    <p class="promo__eyebrow">Best Deal</p>
+                    <h2>Special Products Deal of the Month</h2>
+                    <a class="btn-link btn-link--white" href="#">
+                        Shop now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==== Features ==== -->
+        <section class="container features" aria-label="Store benefits">
+            <div class="feature">
+                <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
                 <div>
-                    <p>Free Shipping</p>
+                    <h3>Free Shipping</h3>
                     <p>Free shipping on all your order</p>
                 </div>
             </div>
-            <div class="d-flex items-center">
-                <i class="fa-solid fa-headset"></i>
+            <div class="feature">
+                <i class="fa-solid fa-headset" aria-hidden="true"></i>
                 <div>
-                    <p>Customer Support 24/7</p>
+                    <h3>Customer Support 24/7</h3>
                     <p>Instant access to Support</p>
                 </div>
             </div>
-            <div class="d-flex items-center">
-                <i class="fa-solid fa-bag-shopping"></i>
+            <div class="feature">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
                 <div>
-                    <p>100% Secure Payment</p>
+                    <h3>100% Secure Payment</h3>
                     <p>We ensure your money is save</p>
                 </div>
             </div>
-            <div class="d-flex items-center">
-                <i class="fa-solid fa-box"></i>
+            <div class="feature">
+                <i class="fa-solid fa-box" aria-hidden="true"></i>
                 <div>
-                    <p>Money-Back Guarantee</p>
+                    <h3>Money-Back Guarantee</h3>
                     <p>30 Days Money-Back Guarantee</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Section 2 -->
-    <Section class="sec-2 container-full">
-        <!-- First div -->
-        <div  class=" div-1 container">
-            <div class="header d-flex py-1">
-                <h2>Popular Categories</h2>
-                <div class="d-flex button items-center">
-                    <a href="#" class="d-flex">
-                        <p>View All</p>
-                        <i class="fa-solid fa-arrow-right"></i> 
-                    </a>
-                </div>
-            </div>
-            <div class="cards d-flex py-1">
-                <div class="card items-center">
-                    <img src="images/Fresh Fruit.png" alt="">
-                    <p>Fresh Fruit</p>
-                </div>
-                <div class="card items-center">
-                    <img src="images/Fresh Vegetables.png" alt="">
-                    <p>Fresh Vegetables</p>
-                </div>
-                <div class="card">
-                    <img src="images/Meat & Fish.png" alt="">
-                    <p>Meat & Fish</p>
-                </div>
-                <div class="card">
-                    <img src="images/Snacks.png" alt="">
-                    <p>Snacks</p>
-                </div>
-                <div class="card">
-                    <img src="images/Beverages.png" alt="">
-                    <p>Beverages</p>
-                </div>
-                <div class="card">
-                    <img src="images/Beauty & Health.png" alt="">
-                    <p>Beauty & Health</p>
-                </div>
-                <div class="card">
-                    <img src="images/Bread & Bakery.png" alt="">
-                    <p>Bread & Bakery</p>
-                </div>
-                <div class="card">
-                    <img src="images/Baking Needs.png" alt="">
-                    <p>Baking Needs</p>
-                </div>
-                <div class="card">
-                    <img src="images/Cooking.png" alt="">
-                    <p>Cooking</p>
-                </div>
-                <div class="card">
-                    <img src="images/Diabetic Food.png" alt="">
-                    <p>Diabetic Food</p>
-                </div>
-                <div class="card">
-                    <img src="images/Dish Detergents.png" alt="">
-                    <p>Dish Detergents</p>
-                </div>
-                <div class="card">
-                    <img src="images/Oil.png" alt="">
-                    <p>Oil</p>
-                </div>
-            </div>            
-        </div>
-        <!-- Second div -->
-         <div class="div-2 container">
-            <div class="header d-flex py-1">
-                <h2>Popular Products</h2>
-                <div class="d-flex button items-center">
-                    <a href="#" class="d-flex">
-                        <p>View All</p>
-                        <i class="fa-solid fa-arrow-right"></i> 
-                    </a>
-                </div>
-            </div>
-            <div class="cards d-flex py-1">
-                <div class="card rel">
-                    <div class="sales abs" style="background-color: rgba(234, 75, 72, 1);">
-                        <p>Sale <span>50%</span></p>
-                    </div>
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Apple.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Apple</p>
-                                <p>$14.99<del>$20.99</del></p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-                        <ul class="rate w-40 d-flex">
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-solid fa-star"></i></li>
-                            <li><i class="fa-regular fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex" >
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Fresh Indian Malta.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Fresh Indian Malta</p>
-                                <p>$20.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
+        </section>
 
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Chinese cabbage.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Chinese cabbage</p>
-                                <p>$12.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Lettuce.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Lettuce</p>
-                                <p>$9.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Eggplant.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Eggplant</p>
-                                <p>$34.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Big Potatoes.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Big Potatoes</p>
-                                <p>$20.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>                        
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Corn.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Corn</p>
-                                <p>$20.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Fresh Cauliflower.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Fresh Cauliflower</p>
-                                <p>$12.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <div class="sales abs d-flex">
-                        <p>Sale <span>50%</span></p>
-                    </div>
-                    <ul class="hidden abs">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Capsicum.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Capsicum</p>
-                                <p>$9.00<del>$20.99</del></p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Chili.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Chili</p>
-                                <p>$34.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
+        <!-- ==== Popular Categories ==== -->
+        <section class="container section" aria-labelledby="categories-title">
+            <div class="section-header">
+                <h2 id="categories-title">Popular Categories</h2>
+                <a class="btn-link" href="#">View All <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
-        <!-- Third div -->
-        <div class="div-3 container d-flex py-1">
-            <div class="offer">
-                <div class="info d-flex items-center">
-                    <p>Best Deals</p>
+
+            <div class="categories">
+                <a class="category" href="#"><img src="images/Fresh Fruit.png" alt=""><span>Fresh Fruit</span></a>
+                <a class="category" href="#"><img src="images/Fresh Vegetables.png" alt=""><span>Fresh Vegetables</span></a>
+                <a class="category" href="#"><img src="images/Meat & Fish.png" alt=""><span>Meat &amp; Fish</span></a>
+                <a class="category" href="#"><img src="images/Snacks.png" alt=""><span>Snacks</span></a>
+                <a class="category" href="#"><img src="images/Beverages.png" alt=""><span>Beverages</span></a>
+                <a class="category" href="#"><img src="images/Beauty & Health.png" alt=""><span>Beauty &amp; Health</span></a>
+                <a class="category" href="#"><img src="images/Bread & Bakery.png" alt=""><span>Bread &amp; Bakery</span></a>
+                <a class="category" href="#"><img src="images/Baking Needs.png" alt=""><span>Baking Needs</span></a>
+                <a class="category" href="#"><img src="images/Cooking.png" alt=""><span>Cooking</span></a>
+                <a class="category" href="#"><img src="images/Diabetic Food.png" alt=""><span>Diabetic Food</span></a>
+                <a class="category" href="#"><img src="images/Dish Detergents.png" alt=""><span>Dish Detergents</span></a>
+                <a class="category" href="#"><img src="images/Oil.png" alt=""><span>Oil</span></a>
+            </div>
+        </section>
+
+        <!-- ==== Popular Products (rendered by JS) ==== -->
+        <section class="container section" aria-labelledby="popular-title">
+            <div class="section-header">
+                <h2 id="popular-title">Popular Products</h2>
+                <a class="btn-link" href="#">View All <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="products" data-products="popular"></div>
+        </section>
+
+        <!-- ==== Offers ==== -->
+        <section class="container section offers" aria-label="Special offers">
+            <article class="offer offer--1">
+                <div class="offer__content">
+                    <p class="offer__eyebrow">Best Deals</p>
                     <h2>Sale of the Month</h2>
-                    <div class="timer d-flex">
-                        <div><p>00</p><p class="date">Days</p></div>
-                        <p>:</p>
-                        <div><p>02</p><p class="date">Hours</p></div>
-                        <p>:</p>
-                        <div><p>18</p><p class="date">Mins</p></div>
-                        <p>:</p>
-                        <div><p>46</p><p class="date">Secs</p></div>
-                    </div>
-                    <div class="d-flex button items-center text-center">
-                        <a href="#" class="d-flex">
-                            <p>Show More</p>
-                            <i class="fa-solid fa-arrow-right"></i> 
-                        </a>
-                    </div>
+                    <ul class="timer" aria-label="Time left">
+                        <li><strong>00</strong><span>Days</span></li>
+                        <li><strong>02</strong><span>Hours</span></li>
+                        <li><strong>18</strong><span>Mins</span></li>
+                        <li><strong>46</strong><span>Secs</span></li>
+                    </ul>
+                    <a class="btn-link btn-link--white" href="#">Show More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
-            </div>
-            <div class="offer">
-                <div class="info d-flex items-center">
-                    <p>85% Fat Free</p>
+            </article>
+
+            <article class="offer offer--2">
+                <div class="offer__content">
+                    <p class="offer__eyebrow">85% Fat Free</p>
                     <h2>Low-Fat Meat</h2>
                     <p>Started at <span class="price">$79.99</span></p>
-                    <div class="d-flex button items-center">
-                        <a href="#" class="d-flex">
-                            <p>Show More</p>
-                            <i class="fa-solid fa-arrow-right"></i> 
-                        </a>
-                    </div>
+                    <a class="btn-link btn-link--white" href="#">Show More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
-            </div>
-            <div class="offer">
-                <div class="info d-flex items-center">
-                    <p>Summer Sale</p>
+            </article>
+
+            <article class="offer offer--3">
+                <div class="offer__content">
+                    <p class="offer__eyebrow">Summer Sale</p>
                     <h2>100% Fresh Fruit</h2>
                     <p>Up to <span class="discount">64% OFF</span></p>
-                    <div class="d-flex button items-center">
-                        <a href="#" class="d-flex">
-                            <p>Show More</p>
-                            <i class="fa-solid fa-arrow-right"></i> 
-                        </a>
-                    </div>
+                    <a class="btn-link" href="#">Show More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
+            </article>
+        </section>
+
+        <!-- ==== Hot Deals ==== -->
+        <section class="container section" aria-labelledby="deals-title">
+            <div class="section-header">
+                <h2 id="deals-title">Hot Deals</h2>
+                <a class="btn-link" href="#">View All <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-        </div>
-    </Section>
-    <!-- Section 3 -->
-    <section class="sec-3 container-full d-flex py-1">
-        <!-- First div -->
-        <div class="container header d-flex py-1">
-            <h2>Hot Deals</h2>
-            <div class="d-flex button items-center">
-                <a href="#" class="d-flex">
-                    <p>View All</p>
-                    <i class="fa-solid fa-arrow-right"></i> 
-                </a>
-            </div>
-        </div>
-        <div class="container d-flex cards">
-            <div class="best-sale-card w-40">
-                <div class="d-flex">
-                    <div style="background-color: rgba(234, 75, 72, 1);">
-                        <p>Sale 50%</p>
+
+            <div class="deals">
+                <article class="deal">
+                    <div class="deal__tags">
+                        <span class="tag tag--sale">Sale 50%</span>
+                        <span class="tag tag--best">Best Sale</span>
                     </div>
-                    <div style="background-color: rgba(35, 136, 255, 1);">
-                        <p>Best Sale</p>
+                    <img class="deal__img" src="images/apples-table.jpg" alt="Green Apples">
+
+                    <div class="deal__actions">
+                        <button class="icon-btn" type="button" aria-label="Add Green Apples to wishlist">
+                            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                        </button>
+                        <button class="deal__cart" type="button" data-add="green-apple">
+                            Add to Cart <i class="fa-solid fa-basket-shopping" aria-hidden="true"></i>
+                        </button>
+                        <button class="icon-btn" type="button" aria-label="Quick view Green Apples">
+                            <i class="fa-regular fa-eye" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="deal__info">
+                        <div>
+                            <h3 class="product__name">Green Apples</h3>
+                            <p class="product__price">$12.00 <del>$24.00</del></p>
+                        </div>
+                        <div class="rating" role="img" aria-label="Rated 4 out of 5">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i>
+                            <span>(524 Feedback)</span>
+                        </div>
+                    </div>
+
+                    <div class="countdown">
+                        <p>Hurry up! Offer ends in:</p>
+                        <ul class="timer" aria-label="Time left">
+                            <li><strong>01</strong><span>Days</span></li>
+                            <li><strong>23</strong><span>Hours</span></li>
+                            <li><strong>34</strong><span>Mins</span></li>
+                            <li><strong>57</strong><span>Secs</span></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="products deals__grid" data-products="hot"></div>
+            </div>
+
+            <div class="products deals__row" data-products="hot-row"></div>
+        </section>
+
+        <!-- ==== Promo Banner ==== -->
+        <section class="container section" aria-label="Summer sale banner">
+            <article class="banner">
+                <img src="images/sec4-img1.jpg" alt="">
+                <div class="banner__content">
+                    <p class="banner__eyebrow">Summer Sale</p>
+                    <h2><span class="banner__accent">37%</span> OFF</h2>
+                    <p>Free on all your order, Free Shipping and 30 days money-back guarantee</p>
+                    <a class="btn-link btn-link--white" href="#">Shop now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </article>
+        </section>
+
+        <!-- ==== Featured Products (rendered by JS) ==== -->
+        <section class="container section" aria-labelledby="featured-title">
+            <div class="section-header">
+                <h2 id="featured-title">Featured Products</h2>
+                <a class="btn-link" href="#">Shop now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="products" data-products="featured"></div>
+        </section>
+
+        <!-- ==== Latest News ==== -->
+        <section class="container section" aria-labelledby="news-title">
+            <div class="section-header">
+                <h2 id="news-title">Latest News</h2>
+            </div>
+
+            <div class="posts">
+                <article class="post">
+                    <img src="images/sec4-img2.png" alt="">
+                    <div class="post__date">
+                        <strong>18</strong>
+                        <span>Nov</span>
+                    </div>
+                    <div class="post__body">
+                        <ul class="post__meta">
+                            <li><i class="fa-solid fa-tag" aria-hidden="true"></i> Food</li>
+                            <li><i class="fa-regular fa-user" aria-hidden="true"></i> By Admin</li>
+                            <li><i class="fa-regular fa-comment" aria-hidden="true"></i> 65 Comments</li>
+                        </ul>
+                        <h3 class="post__title">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</h3>
+                        <a class="btn-link" href="#">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <img src="images/sec4-img3.png" alt="">
+                    <div class="post__date">
+                        <strong>29</strong>
+                        <span>Jan</span>
+                    </div>
+                    <div class="post__body">
+                        <ul class="post__meta">
+                            <li><i class="fa-solid fa-tag" aria-hidden="true"></i> Food</li>
+                            <li><i class="fa-regular fa-user" aria-hidden="true"></i> By Admin</li>
+                            <li><i class="fa-regular fa-comment" aria-hidden="true"></i> 65 Comments</li>
+                        </ul>
+                        <h3 class="post__title">Eget lobortis lorem lacinia. Vivamus pharetra semper,</h3>
+                        <a class="btn-link" href="#">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <img src="images/sec4-img4.png" alt="">
+                    <div class="post__date">
+                        <strong>21</strong>
+                        <span>Feb</span>
+                    </div>
+                    <div class="post__body">
+                        <ul class="post__meta">
+                            <li><i class="fa-solid fa-tag" aria-hidden="true"></i> Food</li>
+                            <li><i class="fa-regular fa-user" aria-hidden="true"></i> By Admin</li>
+                            <li><i class="fa-regular fa-comment" aria-hidden="true"></i> 65 Comments</li>
+                        </ul>
+                        <h3 class="post__title">Maecenas blandit risus elementum mauris malesuada.</h3>
+                        <a class="btn-link" href="#">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==== Testimonials ==== -->
+        <section class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="testimonials-title">Client Testimonials</h2>
+                    <div class="arrows">
+                        <button type="button" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                        <button type="button" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
 
-                <img src="images/apples-table.jpg" alt="">
-                <div class="d-flex">
-                    <div><i class="fa-regular fa-heart"></i></div>
-                    <div><p>Add to Cart <span><i class="fa-solid fa-basket-shopping"></i></span></p></div>
-                    <div><i class="fa-regular fa-eye"></i></div>
+                <div class="testimonials__list">
+                    <figure class="testimonial">
+                        <i class="fa-solid fa-quote-right testimonial__quote" aria-hidden="true"></i>
+                        <blockquote>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                        </blockquote>
+                        <figcaption class="testimonial__footer">
+                            <div class="testimonial__user">
+                                <img src="images/Robert Fox.jpg" alt="Robert Fox">
+                                <div>
+                                    <strong>Robert Fox</strong>
+                                    <span>Customer</span>
+                                </div>
+                            </div>
+                            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+                                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <i class="fa-solid fa-quote-right testimonial__quote" aria-hidden="true"></i>
+                        <blockquote>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                        </blockquote>
+                        <figcaption class="testimonial__footer">
+                            <div class="testimonial__user">
+                                <img src="images/Dianne Russell.jpg" alt="Dianne Russell">
+                                <div>
+                                    <strong>Dianne Russell</strong>
+                                    <span>Customer</span>
+                                </div>
+                            </div>
+                            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+                                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial">
+                        <i class="fa-solid fa-quote-right testimonial__quote" aria-hidden="true"></i>
+                        <blockquote>
+                            <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
+                        </blockquote>
+                        <figcaption class="testimonial__footer">
+                            <div class="testimonial__user">
+                                <img src="images/Eleanor Pena.jpg" alt="Eleanor Pena">
+                                <div>
+                                    <strong>Eleanor Pena</strong>
+                                    <span>Customer</span>
+                                </div>
+                            </div>
+                            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+                                <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div class="info d-flex">
-                    <div>
-                        <p>Green Apples</p>
-                        <p>$12.00 <del>$24.00</del></p>
-                    </div> 
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                        <li><p> (524 Feedback)</p></li>
-                    </ul>
-                </div> 
+            </div>
+        </section>
+
+        <!-- ==== Brands & Instagram ==== -->
+        <section class="gallery" aria-label="Partners and social feed">
+            <div class="container">
+                <div class="brands">
+                    <img src="images/steps.png" alt="">
+                    <img src="images/mango.png" alt="">
+                    <img src="images/Group.png" alt="">
+                    <img src="images/food.png" alt="">
+                    <img src="images/bookoff-corporation-logo.png" alt="">
+                    <img src="images/Group-series.png" alt="">
+                </div>
+
+                <h2 class="gallery__title">Follow us on Instagram</h2>
+
+                <div class="insta">
+                    <img src="images/Instagram Post-1.png" alt="Instagram post 1">
+                    <img src="images/Instagram Post-2.png" alt="Instagram post 2">
+                    <img src="images/Instagram Post-3.png" alt="Instagram post 3">
+                    <img src="images/Instagram Post-4.png" alt="Instagram post 4">
+                    <img src="images/Instagram Post-5.png" alt="Instagram post 5">
+                    <img src="images/Instagram Post-6.png" alt="Instagram post 6">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==== Footer ==== -->
+    <footer class="site-footer">
+        <div class="newsletter">
+            <div class="container newsletter__inner">
                 <div>
-                    <p>Hurry up! Offer ends In:</p>
-                    <div class="timer d-flex">
-                        <div><h3>01</h3><p>Days</p></div>
-                        <p>:</p>
-                        <div><h3>23</h3><p>Hours</p></div>
-                        <p>:</p>
-                        <div><h3>34</h3><p>Mins</p></div>
-                        <p>:</p>
-                        <div><h3>57</h3><p>Secs</p></div>
-                    </div>                    
-                </div>              
-            </div>
-            <!-- 6 cards-->
-            <div class="w-60 cards d-flex">
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Chinese cabbage.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Chinese cabbage</p>
-                                <p>$12.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
+                    <h2 class="newsletter__title">Subscribe to our Newsletter</h2>
+                    <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
+                </div>
 
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Lettuce.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Lettuce</p>
-                                <p>$9.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Eggplant.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Eggplant</p>
-                                <p>$34.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Fresh Cauliflower.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Fresh Cauliflower</p>
-                                <p>$12.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>                            
-                        </div>
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <div class="sales abs">
-                        <p>Sale 50%</p>
-                    </div>
-                    <ul class="hidden abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Capsicum.jpg" alt="">
-                        <div class="details d-flex">
-                            <div class="data d-flex">
-                                <p>Green Capsicum</p>
-                                <p>$9.00 <del>$20.00</del></p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
+                <form class="newsletter__form">
+                    <label class="visually-hidden" for="newsletter-email">Email address</label>
+                    <input id="newsletter-email" type="email" name="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
 
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card rel">
-                    <ul class="hideen abs d-flex">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <div class="info d-flex">
-                        <img src="images/Green Chili.jpg" alt="">
-                        <div class="details data">
-                            <div class="data d-flex">
-                                <p>Green Chili</p>
-                                <p>$34.00</p>
-                            </div>
-                            <div class="icon items-center">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </div>
-                        </div>
-
-                    </div>
-                    <ul class="rate w-40 d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- THe last cards -->
-        <div class="cards">
-            <div class="card rel">
-                <ul class="hidden abs d-flex">
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-eye"></i></li>
+                <ul class="socials">
+                    <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
-                
-                <div class="info d-flex">
-                    <img src="images/Big Potatoes.jpg" alt="">
-                    <div class="details d-flex">
-                        <div class="data d-flex">
-                            <p>Big Potatoes</p>
-                            <p>$12.00</p>
-                        </div>
-                        <div class="icon items-center">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>                        
-                    </div>
-                </div>
-                <ul class="rate w-40 d-flex">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="d-flex">
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-eye"></i></li>
-                </ul>
-                <img src="images/Corn.jpg" alt="">
-                <div class="info d-flex">
-                    <div>
-                        <p>Corn</p>
-                        <p>$12.00</p>
-                    </div>
-                    <div class="icon items-center">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </div>
-                </div>
-                <ul class="rate w-40 d-flex">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="d-flex">
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-eye"></i></li>
-                </ul>
-                <img src="images/Red Capsicum.jpg" alt="">
-                <div class="info d-flex">
-                    <div>
-                        <p>Red Chili</p>
-                        <p>$12.00</p>
-                    </div>
-                    <div class="icon items-center">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </div>
-                </div>
-                <ul class="rate w-40 d-flex">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </div>
-            <div class="card">
-                <div style="background-color: rgba(234, 75, 72, 1);">
-                    <p>Sale 50%</p>
-                </div>
-                <ul>
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-eye"></i></li>
-                </ul>
-                <img src="images/Red Tomatos.jpg" alt="">
-                <div class="info d-flex">
-                    <div>
-                        <p>Red Tomatos</p>
-                        <p>$9.00 <del>$20.00</del></p>
-                    </div>
-                    <div class="icon items-center">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </div>
-                </div>
-                <ul class="rate w-40 d-flex">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="d-flex">
-                    <li><i class="fa-regular fa-heart"></i></li>
-                    <li><i class="fa-regular fa-eye"></i></li>
-                </ul>
-                <img src="images/Surjapur Mango.jpg" alt="">
-                <div class="info d-flex">
-                    <div>
-                        <p>Surjapur Mango</p>
-                        <p>$34.00</p>
-                    </div>
-                    <div class="icon items-center">
-                        <i class="fa-solid fa-basket-shopping"></i>
-                    </div>
-                </div>
-                <ul class="rate w-40 d-flex">
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                </ul>
-            </div>
-        </div>
-        
-    </section>
-    <!-- Section 4 -->
-    <section>
-        <!-- First div -->
-        <div style="background-color: azure;">
-            <img src="images/sec4-img1.jpg" alt="">
-            <div class="info">
-                <p>Summer Sale</p>
-                <h2><span style="color: rgba(255, 138, 0, 1);">37%</span> OFF</h2>
-                <p>Free on all your order, Free Shipping and  30 days money-back guarantee</p>
-            </div>
-            <div class="d-flex show-more abs">
-                <p>Show More <span><i class="fa-solid fa-arrow-right"></i></span></p> 
-                <div class="button d-flex">
-                    <a href="#" class="d-flex">
-                        <span class="hidden-text">Show More</span>
-                        <i class="fa-solid fa-arrow-right"></i> 
-                    </a>
-                </div> 
-            </div>
-        </div>
-        <!-- Second div -->
-        <div>
-            <div class="header d-flex">
-                <h2>Featured Products</h2>
-                <div class="d-flex show-more abs">
-                    <p>Show More <span><i class="fa-solid fa-arrow-right"></i></span></p> 
-                    <div class="button d-flex">
-                        <a href="#" class="d-flex">
-                            <span class="hidden-text">Show More</span>
-                            <i class="fa-solid fa-arrow-right"></i> 
-                        </a>
-                    </div> 
-                </div>
-            </div>
-            <div class="cards">
-                <div class="card" style="background-color: rgb(199, 170, 127);">
-                    <div style="background-color: rgba(234, 75, 72, 1);">
-                        <p>Sale 50%</p>
-                    </div>
-                    <ul class="d-flex" style="background-color: beige;">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <img src="images/Green Apple.jpg" alt="">
-                    <div class="info d-flex">
-                        <div>
-                            <p>Green Apple</p>
-                            <p>$14.00 <del>$20.00</del></p>
-                        </div>
-                        <div style="background-color: rgba(242, 242, 242, 1);">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card" style="background-color: rgb(199, 170, 127);">
-                    <ul class="d-flex" style="background-color: beige;">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <img src="images/Fresh Indian Malta.jpg" alt="">
-                    <div class="info d-flex">
-                        <div>
-                            <p>Fresh Indian Malta</p>
-                            <p>$20.00</p>
-                        </div>
-                        <div style="background-color: rgba(242, 242, 242, 1);">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card" style="background-color: rgb(199, 170, 127);">
-                    <ul class="d-flex" style="background-color: beige;">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <img src="images/Chinese cabbage.jpg" alt="">
-                    <div class="info d-flex">
-                        <div>
-                            <p>Chinese cabbage</p>
-                            <p>$12.00</p>
-                        </div>
-                        <div style="background-color: rgba(242, 242, 242, 1);">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card" style="background-color: rgb(199, 170, 127);">
-                    <ul class="d-flex" style="background-color: beige;">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <img src="images/Green Lettuce.jpg" alt="">
-                    <div class="info d-flex">
-                        <div>
-                            <p>Green Lettuce</p>
-                            <p>$9.00</p>
-                        </div>
-                        <div style="background-color: rgba(242, 242, 242, 1);">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-                <div class="card" style="background-color: rgb(199, 170, 127);">
-                    <ul class="d-flex" style="background-color: beige;">
-                        <li><i class="fa-regular fa-heart"></i></li>
-                        <li><i class="fa-regular fa-eye"></i></li>
-                    </ul>
-                    <img src="images/Eggplant.jpg" alt="">
-                    <div class="info d-flex">
-                        <div>
-                            <p>Eggplant</p>
-                            <p>$34.00</p>
-                        </div>
-                        <div style="background-color: rgba(242, 242, 242, 1);">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-regular fa-star"></i></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Third div -->
-        <div>
-            <h2>Latest News</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="images/sec4-img2.jpg" alt="">
-                    <div class="date d-flex"><h3>18</h3> <p>Nov</p></div>
-                    <div class="info">
-                        <ul class="d-flex">
-                            <li><i class="fa-solid fa-tag"></i><p>Food</p></li>
-                            <li><i class="fa-regular fa-user"></i><p>By Admin</p></li>
-                            <li><i class="fa-regular fa-comment"></i><p>65 Comments</p></li>
-                        </ul>
-                        <p>Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</p>
-                        <div class="d-flex show-more abs">
-                            <p>Read More <span><i class="fa-solid fa-arrow-right"></i></span></p> 
-                            <div class="button d-flex">
-                                <a href="#" class="d-flex">
-                                    <span class="hidden-text">Read More</span>
-                                    <i class="fa-solid fa-arrow-right"></i> 
-                                </a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/sec4-img3.jpg" alt="">
-                    <div class="date d-flex"><h3>29</h3> <p>Jan</p></div>
-                    <div class="info">
-                        <ul class="d-flex">
-                            <li><i class="fa-solid fa-tag"></i><p>Food</p></li>
-                            <li><i class="fa-regular fa-user"></i><p>By Admin</p></li>
-                            <li><i class="fa-regular fa-comment"></i><p>65 Comments</p></li>
-                        </ul>
-                        <p>Eget lobortis lorem lacinia. Vivamus pharetra semper,</p>
-                        <div class="d-flex show-more abs">
-                            <p>Read More <span><i class="fa-solid fa-arrow-right"></i></span></p> 
-                            <div class="button d-flex">
-                                <a href="#" class="d-flex">
-                                    <span class="hidden-text">Read More</span>
-                                    <i class="fa-solid fa-arrow-right"></i> 
-                                </a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/sec4-img4.jpg" alt="">
-                    <div class="date d-flex"><h3>29</h3> <p>Jan</p></div>
-                    <div class="info">
-                        <ul class="d-flex">
-                            <li><i class="fa-solid fa-tag"></i><p>Food</p></li>
-                            <li><i class="fa-regular fa-user"></i><p>By Admin</p></li>
-                            <li><i class="fa-regular fa-comment"></i><p>65 Comments</p></li>
-                        </ul>
-                        <p>Maecenas blandit risus elementum mauris malesuada.</p>
-                        <div class="d-flex show-more abs">
-                            <p>Read More <span><i class="fa-solid fa-arrow-right"></i></span></p> 
-                            <div class="button d-flex">
-                                <a href="#" class="d-flex">
-                                    <span class="hidden-text">Read More</span>
-                                    <i class="fa-solid fa-arrow-right"></i> 
-                                </a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Section 5 -->
-    <section style="background-color: rgba(242, 242, 242, 1);">
-        <div class="header d-flex">
-            <h2>Client Testimonials</h2>
-            <ul class="d-flex">
-                <li><i class="fa-solid fa-arrow-left"></i></li>
-                <li><i class="fa-solid fa-arrow-right"></i></li>
-            </ul>
-        </div>
-        <div class="Comments">
-            <div class="content">
-                <i class="fa-solid fa-quote-right"></i>
-                <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                <div class="d-flex">
-                    <div class="user d-flex">
-                        <img src="images/Robert Fox.jpg" alt="">
-                        <div class="info">
-                            <p>Robert Fox</p>
-                            <p>Customer</p>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="content">
-                <i class="fa-solid fa-quote-right"></i>
-                <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                <div class="d-flex">
-                    <div class="user d-flex">
-                        <img src="images/Dianne Russell.jpg" alt="">
-                        <div class="info">
-                            <p>Dianne Russell</p>
-                            <p>Customer</p>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="content">
-                <i class="fa-solid fa-quote-right"></i>
-                <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec sed neque eget</p>
-                <div class="d-flex">
-                    <div class="user d-flex">
-                        <img src="images/Eleanor Pena.jpg" alt="">
-                        <div class="info">
-                            <p>Eleanor Pena</p>
-                            <p>Customer</p>
-                        </div>
-                    </div>
-                    <ul class="d-flex">
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                        <li><i class="fa-solid fa-star"></i></li>
-                    </ul>
-                </div>
-            </div>
-            
-
-        </div>
-    </section>
-    <!-- Section 6 -->
-    <section style="background-color: rgb(170, 101, 101);">
-        <div class="d-flex">
-            <img src="images/steps.png" alt="">
-            <img src="images/mango.png" alt="">
-            <img src="images/Group.png" alt="">
-            <img src="images/food.png" alt="">
-            <img src="images/bookoff-corporation-logo.png" alt="">
-            <img src="images/Group-series.png" alt="">
-        </div>
-        <div>
-            <h2>Follow us on Instagram</h2>
-            <div>
-                <img src="images/sec6-img1.jpg" alt="">
-                <img src="images/sec6-img2.jpg" alt="">
-                <img src="images/sec6-img3.jpg" alt="">
-                <img src="images/sec6-img4.jpg" alt="">
-                <img src="images/sec6-img5.jpg" alt="">
-                <img src="images/sec6-img6.jpg" alt="">
             </div>
         </div>
 
-    </section>
-    <!-- Footer -->
-    <section style="color: rgb(255, 255, 255); background-color: rgba(26, 26, 26, 1);">
-        <div class="d-flex" style="background-color: rgba(247, 247, 247, 1);">
-            <div>
-                <h3>Subcribe our Newsletter</h3>
-                <p>Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna.</p>
-            </div>
-            <div class="d-flex">
-                <input type="email" name="email" placeholder="Your email address">
-                <button type="submit" value="save">Subscribe</button>
-            </div>
-            <ul class="links d-flex">
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
-        </div>
-        <!-- First div -->
-        <div>
-            <!-- Company -->
-            <div>
-                <div class="logo d-flex">
-                    <img src="images/plant 1.jpg" alt="">
-                    <h2 style="color: rgba(255, 255, 255, 1);">Ecobazar</h2>
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <div class="logo">
+                    <img src="images/plant 1.jpg" alt="" width="27" height="27">
+                    <span>Ecobazar</span>
                 </div>
                 <p>Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis dui, eget bibendum magna congue nec.</p>
-                <div class="d-flex">
-                    <h3><a href="#">(219) 555-0114</a></h3>
-                    <p>or</p>
-                    <h3><a href="#">Proxy@gmail.com</a></h3>
-                </div>
+                <p class="footer__contact">
+                    <a href="tel:+12195550114">(219) 555-0114</a>
+                    <span>or</span>
+                    <a href="mailto:Proxy@gmail.com">Proxy@gmail.com</a>
+                </p>
             </div>
-            <!-- My Account -->
-            <div>
+
+            <nav aria-label="My account">
                 <h3>My Account</h3>
                 <ul>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">Order History</a></li>
-                    <li><a href="#">Shoping Cart</a></li>
+                    <li><a href="#">Shopping Cart</a></li>
                     <li><a href="#">Wishlist</a></li>
                 </ul>
-            </div>
-            <!-- Helps -->
-            <div>
+            </nav>
+
+            <nav aria-label="Help">
                 <h3>Helps</h3>
                 <ul>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Faqs</a></li>
-                    <li><a href="#">Terms & Condition</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                 </ul>
-            </div>
-            <!-- Proxy -->
-            <div>
+            </nav>
+
+            <nav aria-label="Proxy">
                 <h3>Proxy</h3>
                 <ul>
                     <li><a href="#">About</a></li>
@@ -1288,32 +542,36 @@
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Track Order</a></li>
                 </ul>
-            </div>
-            <!-- Categories -->
-            <div>
+            </nav>
+
+            <nav aria-label="Categories">
                 <h3>Categories</h3>
                 <ul>
-                    <li><a href="#">Fruit & Vegetables</a></li>
-                    <li><a href="#">Meat & Fish</a></li>
-                    <li><a href="#">Bread & Bakery</a></li>
-                    <li><a href="#">Beauty & Health</a></li>
+                    <li><a href="#">Fruit &amp; Vegetables</a></li>
+                    <li><a href="#">Meat &amp; Fish</a></li>
+                    <li><a href="#">Bread &amp; Bakery</a></li>
+                    <li><a href="#">Beauty &amp; Health</a></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-        <!-- Second div -->
-        <div class="d-flex">
+
+        <div class="container footer__bottom">
             <p>Ecobazar eCommerce © 2021. All Rights Reserved</p>
-            <ul class="d-flex">
-                <li><img src="images/ApplePay.png" alt=""></li>
-                <li><img src="images/visa-logo.png" alt=""></li>
-                <li><img src="images/Discover.png" alt=""></li>
-                <li><img src="images/Mastercard.png" alt=""></li>
-                <li><div>
-                    <i class="fa-solid fa-lock"></i> <span>Secure</span>
-                    <p>Payment</p>
-                </div></li>
+
+            <ul class="payments">
+                <li><img src="images/ApplePay.png" alt="Apple Pay"></li>
+                <li><img src="images/visa-logo.png" alt="Visa"></li>
+                <li><img src="images/Discover.png" alt="Discover"></li>
+                <li><img src="images/Mastercard.png" alt="Mastercard"></li>
             </ul>
+
+            <p class="secure">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <span>Secure Payment</span>
+            </p>
         </div>
-    </section>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
